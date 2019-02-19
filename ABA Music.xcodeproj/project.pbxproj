@@ -43,6 +43,7 @@
 		C8F567D3221CB360002182EA /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D2221CB360002182EA /* SearchListInteractor.swift */; };
 		C8F567D5221CB371002182EA /* SearchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D4221CB371002182EA /* SearchListRouter.swift */; };
 		C8F567D9221CB578002182EA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D8221CB578002182EA /* UIColor.swift */; };
+		C8F567DC221CBA52002182EA /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567DB221CBA52002182EA /* ArtistViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		C8F567D2221CB360002182EA /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
 		C8F567D4221CB371002182EA /* SearchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListRouter.swift; sourceTree = "<group>"; };
 		C8F567D8221CB578002182EA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C8F567DB221CBA52002182EA /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -339,6 +341,7 @@
 		C8F567B6221C9EC8002182EA /* Search List */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567DA221CB9F4002182EA /* View Model */,
 				C8F567CC221CB2B7002182EA /* SearchListProtocols.swift */,
 				C8F567CE221CB300002182EA /* SearchListViewController.swift */,
 				C8F567D0221CB351002182EA /* SearchListPresenter.swift */,
@@ -424,6 +427,14 @@
 				C8F567D8221CB578002182EA /* UIColor.swift */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C8F567DA221CB9F4002182EA /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567DB221CBA52002182EA /* ArtistViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -707,6 +718,7 @@
 				8B4699BC21975EE100A82349 /* TrackViewController.swift in Sources */,
 				C8F567CD221CB2B7002182EA /* SearchListProtocols.swift in Sources */,
 				C8F567CF221CB300002182EA /* SearchListViewController.swift in Sources */,
+				C8F567DC221CBA52002182EA /* ArtistViewModel.swift in Sources */,
 				C8F567D5221CB371002182EA /* SearchListRouter.swift in Sources */,
 				C8F5679F221C9111002182EA /* RequestManager.swift in Sources */,
 				8BA3CDD5219761CC005264D4 /* PlayerView.swift in Sources */,

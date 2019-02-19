@@ -13,6 +13,7 @@ protocol SearchListViewInjection : class {
     func showProgress(_ show: Bool, status: String)
     func showProgress(_ show: Bool)
     func showMessageWith(title: String, message: String, actionTitle: String)
+    func loadArtists(_ viewModels: [ArtistViewModel], fromBeginning: Bool)
 }
 
 protocol SearchListPresenterDelegate : class {
@@ -23,7 +24,12 @@ protocol SearchListPresenterDelegate : class {
 
 // Presenter / Interactor
 
+typealias ArtistsGetArtistsCompletionBlock = (_ viewModel: [ArtistViewModel]?, _ success: Bool, _ error: ResultError?) -> Void
+
 protocol SearchListInteractorDelegate : class {
+    func getArtistsList(search: String?, completion: @escaping ArtistsGetArtistsCompletionBlock)
+    func clear()
+    func getRecipeSelectedAt(_ index: Int) -> ArtistViewModel?
 }
 
 // Presenter / Router

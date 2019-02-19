@@ -12,4 +12,15 @@ class SearchListInteractor {
 }
 
 extension SearchListInteractor: SearchListInteractorDelegate {
+    
+    func getArtistsList(search: String?, completion: @escaping ArtistsGetArtistsCompletionBlock) {
+    }
+    
+    func clear() {
+    }
+    
+    func getRecipeSelectedAt(_ index: Int) -> ArtistViewModel? {
+        return nil
+    }
+    
 }

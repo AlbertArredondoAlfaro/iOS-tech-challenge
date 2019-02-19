@@ -83,5 +83,8 @@ extension SearchListViewController: SearchListViewInjection {
         showAlertWith(title: title, message: message, actionTitle: actionTitle)
     }
     
+    func loadArtists(_ viewModels: [ArtistViewModel], fromBeginning: Bool) {
+    }
+    
 }
 

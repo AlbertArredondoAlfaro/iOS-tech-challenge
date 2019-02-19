@@ -30,6 +30,7 @@
 		C8F567A6221C9111002182EA /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56799221C9111002182EA /* EndPoint.swift */; };
 		C8F567AB221C915D002182EA /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AA221C915D002182EA /* Artist.swift */; };
 		C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AC221C93C0002182EA /* ArtistsRequest.swift */; };
+		C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AF221C948A002182EA /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		C8F56799221C9111002182EA /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		C8F567AA221C915D002182EA /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		C8F567AC221C93C0002182EA /* ArtistsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsRequest.swift; sourceTree = "<group>"; };
+		C8F567AF221C948A002182EA /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 		8BC33F5D21944CDF00E3759C /* ABA MusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567AE221C9456002182EA /* Network */,
 				8BC33F5E21944CDF00E3759C /* ABA_MusicTests.swift */,
 				8BC33F6021944CDF00E3759C /* Info.plist */,
 			);
@@ -269,6 +272,14 @@
 				C8F567AA221C915D002182EA /* Artist.swift */,
 			);
 			path = Artist;
+			sourceTree = "<group>";
+		};
+		C8F567AE221C9456002182EA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567AF221C948A002182EA /* NetworkTests.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -550,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */,
 				8BC33F5F21944CDF00E3759C /* ABA_MusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

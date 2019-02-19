@@ -17,7 +17,6 @@
 		8BC33F4C21944CDE00E3759C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC33F4B21944CDE00E3759C /* ViewController.swift */; };
 		8BC33F5121944CDF00E3759C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC33F5021944CDF00E3759C /* Assets.xcassets */; };
 		8BC33F5421944CDF00E3759C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC33F5221944CDF00E3759C /* LaunchScreen.storyboard */; };
-		8BC33F5F21944CDF00E3759C /* ABA_MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC33F5E21944CDF00E3759C /* ABA_MusicTests.swift */; };
 		8BC33F6A21944CDF00E3759C /* ABA_MusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC33F6921944CDF00E3759C /* ABA_MusicUITests.swift */; };
 		980D63085AC1F41300E2D288 /* Pods_ABA_MusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CC18A205AAE9C8AE379516 /* Pods_ABA_MusicTests.framework */; };
 		C8F5679F221C9111002182EA /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56791221C9111002182EA /* RequestManager.swift */; };
@@ -68,7 +67,6 @@
 		8BC33F5321944CDF00E3759C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BC33F5521944CDF00E3759C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BC33F5A21944CDF00E3759C /* ABA MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ABA MusicTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BC33F5E21944CDF00E3759C /* ABA_MusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABA_MusicTests.swift; sourceTree = "<group>"; };
 		8BC33F6021944CDF00E3759C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BC33F6521944CDF00E3759C /* ABA MusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ABA MusicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC33F6921944CDF00E3759C /* ABA_MusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABA_MusicUITests.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				C8F567AE221C9456002182EA /* Network */,
-				8BC33F5E21944CDF00E3759C /* ABA_MusicTests.swift */,
 				8BC33F6021944CDF00E3759C /* Info.plist */,
 			);
 			path = "ABA MusicTests";
@@ -590,7 +587,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */,
-				8BC33F5F21944CDF00E3759C /* ABA_MusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

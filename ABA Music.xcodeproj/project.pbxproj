@@ -35,6 +35,7 @@
 		C8F567BE221CA398002182EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BB221CA398002182EA /* Reachability.m */; };
 		C8F567C3221CA909002182EA /* SearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567C2221CA909002182EA /* SearchSuggestion.swift */; };
 		C8F567C5221CA9A1002182EA /* SearchSuggestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567C4221CA9A1002182EA /* SearchSuggestionsManager.swift */; };
+		C8F567C8221CAA1A002182EA /* SuggestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567C7221CAA1A002182EA /* SuggestionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		C8F567BF221CA3BF002182EA /* ABA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABA-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8F567C2221CA909002182EA /* SearchSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestion.swift; sourceTree = "<group>"; };
 		C8F567C4221CA9A1002182EA /* SearchSuggestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsManager.swift; sourceTree = "<group>"; };
+		C8F567C7221CAA1A002182EA /* SuggestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTests.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -202,6 +204,7 @@
 		8BC33F5D21944CDF00E3759C /* ABA MusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567C6221CAA09002182EA /* Suggestions */,
 				C8F567AE221C9456002182EA /* Network */,
 				8BC33F6021944CDF00E3759C /* Info.plist */,
 			);
@@ -368,6 +371,14 @@
 				C8F567C2221CA909002182EA /* SearchSuggestion.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		C8F567C6221CAA09002182EA /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567C7221CAA1A002182EA /* SuggestionsTests.swift */,
+			);
+			path = Suggestions;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -664,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */,
+				C8F567C8221CAA1A002182EA /* SuggestionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

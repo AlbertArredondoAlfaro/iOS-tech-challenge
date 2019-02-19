@@ -16,6 +16,7 @@ class SearchListViewController: BaseViewController {
         super.viewDidLoad()
         setupViews()
         configureNavigationBar()
+        presenter?.viewDidLoad()
     }
     
 }
@@ -84,6 +85,7 @@ extension SearchListViewController: SearchListViewInjection {
     }
     
     func loadArtists(_ viewModels: [ArtistViewModel], fromBeginning: Bool) {
+        print("TO DO")
     }
     
 }

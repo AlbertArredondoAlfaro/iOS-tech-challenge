@@ -23,9 +23,40 @@ class SearchListPresenter {
     
 }
 
+extension SearchListPresenter {
+    
+    private func getArtists(_ search: String? = nil, showProgress: Bool) {
+        view?.showProgress(showProgress, status: "Loading artists")
+        
+        interactor.getArtistsList(search: search) { [weak self] (artists, success, error) in
+            guard let `self` = self else { return }
+            
+            self.view?.showProgress(false)
+            
+            if let artists = artists {
+                self.view?.loadArtists(artists, fromBeginning: showProgress)
+                return
+            }
+            
+            if let error = error {
+                self.view?.showMessageWith(title: "Oops... 🧐", message: error.localizedDescription, actionTitle: "Accept")
+                return
+            }
+            
+            if !success {
+                self.view?.showMessageWith(title: "Oops... 🧐", message: "Something wrong happened. Please try again", actionTitle: "Accept")
+                return
+            }
+        }
+    }
+    
+}
+
 extension SearchListPresenter: SearchListPresenterDelegate {
     
     func viewDidLoad() {
+        interactor.clear()
+        getArtists("The beatles", showProgress: true)
     }
     
     func searchArtist(_ artist: String?) {

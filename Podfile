@@ -11,6 +11,9 @@ def abaMusicPods
     pod 'PureLayout'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Cache'
+    
+    #Realm
+    pod 'RealmSwift', '~> 3.13.1'
 end
 
 target 'ABA Music' do

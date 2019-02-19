@@ -5,6 +5,11 @@ PODS:
   - Cache (5.2.0)
   - CollectionViewSlantedLayout (3.1.1)
   - PureLayout (3.1.4)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -12,6 +17,7 @@ DEPENDENCIES:
   - Cache
   - CollectionViewSlantedLayout
   - PureLayout
+  - RealmSwift (~> 3.13.1)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -21,6 +27,8 @@ SPEC REPOS:
     - Cache
     - CollectionViewSlantedLayout
     - PureLayout
+    - Realm
+    - RealmSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -29,8 +37,10 @@ SPEC CHECKSUMS:
   Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: cefd742a15644ebda038d4d57e418341a2a9bd61
+PODFILE CHECKSUM: 535619161fe78770399bedca5eebaa7a5e3e8cf6
 
 COCOAPODS: 1.5.3

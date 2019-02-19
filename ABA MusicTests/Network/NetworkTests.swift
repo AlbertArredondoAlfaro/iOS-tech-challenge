@@ -52,5 +52,26 @@ class NetworkTests: XCTestCase {
         
         self.waitForExpectations(timeout: 25.0, handler: nil)
     }
+    
+    func testSimulatedArtistsResults() {
+        let artistsResultsExpectation: XCTestExpectation = self.expectation(description: "artistsResultsExpectation")
+        
+        testArtistsResultsWith(search: "beatles", simulatedJSONFile: "Artists") { (response) in
+            switch response {
+            case .success(let response):
+                guard let response = response else {
+                    XCTFail("Impossible to get the response")
+                    return
+                }
+                XCTAssert(response.results.count != 0, "data array can't be empty")
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            
+            artistsResultsExpectation.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: 25.0, handler: nil)
+    }
 
 }

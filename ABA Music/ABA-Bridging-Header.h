@@ -12,4 +12,7 @@
 //__ Reachability
 #import "Reachability.h"
 
+//__ SVProgressHUD
+#import <SVProgressHUD/SVProgressHUD.h>
+
 #endif /* ABA_Bridging_Header_h */

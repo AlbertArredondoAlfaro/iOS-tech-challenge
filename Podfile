@@ -12,6 +12,9 @@ def abaMusicPods
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Cache'
     
+    #SVProgressHUD
+    pod 'SVProgressHUD', '~> 2.2.5'
+    
     #Realm
     pod 'RealmSwift', '~> 3.13.1'
 end

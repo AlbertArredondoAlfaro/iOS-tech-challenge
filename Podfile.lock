@@ -10,6 +10,7 @@ PODS:
   - Realm/Headers (3.13.1)
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
+  - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - CollectionViewSlantedLayout
   - PureLayout
   - RealmSwift (~> 3.13.1)
+  - SVProgressHUD (~> 2.2.5)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - PureLayout
     - Realm
     - RealmSwift
+    - SVProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -39,8 +42,9 @@ SPEC CHECKSUMS:
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 535619161fe78770399bedca5eebaa7a5e3e8cf6
+PODFILE CHECKSUM: 07150b2753cfa6455630472e8766a3fe3430ffd5
 
 COCOAPODS: 1.5.3

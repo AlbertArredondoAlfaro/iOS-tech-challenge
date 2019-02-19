@@ -31,6 +31,8 @@
 		C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AC221C93C0002182EA /* ArtistsRequest.swift */; };
 		C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AF221C948A002182EA /* NetworkTests.swift */; };
 		C8F567B5221C9B82002182EA /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = C8F567B4221C9B82002182EA /* Artists.json */; };
+		C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BA221CA398002182EA /* ReachabilityManager.swift */; };
+		C8F567BE221CA398002182EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BB221CA398002182EA /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		C8F567AC221C93C0002182EA /* ArtistsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsRequest.swift; sourceTree = "<group>"; };
 		C8F567AF221C948A002182EA /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		C8F567B4221C9B82002182EA /* Artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
+		C8F567BA221CA398002182EA /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		C8F567BB221CA398002182EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C8F567BC221CA398002182EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C8F567BF221CA3BF002182EA /* ABA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABA-Bridging-Header.h"; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,10 +181,12 @@
 		8BC33F4821944CDE00E3759C /* ABA Music */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567BF221CA3BF002182EA /* ABA-Bridging-Header.h */,
 				8B0CEE4721B5723300C39C58 /* Application */,
 				8B0CEE4521B54C6900C39C58 /* Views */,
 				8B0CEE4621B54C8800C39C58 /* Model */,
 				C8F5678F221C9111002182EA /* Network */,
+				C8F567B8221CA361002182EA /* Managers */,
 				C8F567B1221C9B1F002182EA /* Resources */,
 				8BC33F5021944CDF00E3759C /* Assets.xcassets */,
 				8BC33F5221944CDF00E3759C /* LaunchScreen.storyboard */,
@@ -322,6 +330,24 @@
 			path = "Track Detail";
 			sourceTree = "<group>";
 		};
+		C8F567B8221CA361002182EA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567B9221CA37F002182EA /* Reachability Manager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C8F567B9221CA37F002182EA /* Reachability Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567BC221CA398002182EA /* Reachability.h */,
+				C8F567BB221CA398002182EA /* Reachability.m */,
+				C8F567BA221CA398002182EA /* ReachabilityManager.swift */,
+			);
+			path = "Reachability Manager";
+			sourceTree = "<group>";
+		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +430,7 @@
 				TargetAttributes = {
 					8BC33F4521944CDE00E3759C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					8BC33F5921944CDF00E3759C = {
 						CreatedOnToolsVersion = 10.1;
@@ -582,11 +609,13 @@
 				C8F567A0221C9111002182EA /* HTTPCode.swift in Sources */,
 				8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */,
 				C8F567A5221C9111002182EA /* ResultError.swift in Sources */,
+				C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */,
 				C8F567A3221C9111002182EA /* RequestProtocol.swift in Sources */,
 				C8F567A1221C9111002182EA /* NetworkHeaders.swift in Sources */,
 				8B4699BC21975EE100A82349 /* TrackViewController.swift in Sources */,
 				C8F5679F221C9111002182EA /* RequestManager.swift in Sources */,
 				8BA3CDD5219761CC005264D4 /* PlayerView.swift in Sources */,
+				C8F567BE221CA398002182EA /* Reachability.m in Sources */,
 				C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */,
 				8B0EFD0821960BF80024DAA2 /* ArtistCollectionViewCell.swift in Sources */,
 				8B0CEE4321B54C2700C39C58 /* Entities.swift in Sources */,
@@ -762,6 +791,7 @@
 			baseConfigurationReference = 71DEC0EE01917AA36C5F79A0 /* Pods-ABA Music.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ABA Music/Info.plist";
@@ -771,6 +801,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abaenglish.ABA-Music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ABA Music/ABA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -781,6 +813,7 @@
 			baseConfigurationReference = 8128708AB1E783950E2487E6 /* Pods-ABA Music.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ABA Music/Info.plist";
@@ -790,6 +823,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abaenglish.ABA-Music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ABA Music/ABA-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

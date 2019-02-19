@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class SearchListPresenter {
+    
+    private weak var view: SearchListViewInjection?
+    private let interactor: SearchListInteractorDelegate
+    private let router: SearchListRouterDelegate
+    
+    // MARK - Lifecycle
+    init(view: SearchListViewInjection, navigationController: UINavigationController? = nil) {
+        self.view = view
+        self.interactor = SearchListInteractor()
+        self.router = SearchListRouter(navigationController: navigationController)
+    }
+    
+}
+
+extension SearchListPresenter: SearchListPresenterDelegate {
+}

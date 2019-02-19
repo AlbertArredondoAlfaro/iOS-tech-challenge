@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class SearchListInteractor {
+}
+
+extension SearchListInteractor: SearchListInteractorDelegate {
+}

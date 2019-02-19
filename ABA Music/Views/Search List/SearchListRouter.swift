@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class SearchListRouter {
+    
+    private weak var navigationController: UINavigationController?
+    
+    init(navigationController: UINavigationController? = nil) {
+        self.navigationController = navigationController
+    }
+    
+    public static func setupModule() -> UINavigationController {
+        let searchListVC = SearchListViewController()
+        let searchListNVC = UINavigationController(rootViewController: searchListVC)
+        searchListVC.presenter = SearchListPresenter(view: searchListVC, navigationController: searchListNVC)
+        return searchListNVC
+    }
+    
+}
+
+extension SearchListRouter: SearchListRouterDelegate {
+}

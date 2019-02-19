@@ -42,6 +42,7 @@
 		C8F567D1221CB351002182EA /* SearchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D0221CB351002182EA /* SearchListPresenter.swift */; };
 		C8F567D3221CB360002182EA /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D2221CB360002182EA /* SearchListInteractor.swift */; };
 		C8F567D5221CB371002182EA /* SearchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D4221CB371002182EA /* SearchListRouter.swift */; };
+		C8F567D9221CB578002182EA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D8221CB578002182EA /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		C8F567D0221CB351002182EA /* SearchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListPresenter.swift; sourceTree = "<group>"; };
 		C8F567D2221CB360002182EA /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
 		C8F567D4221CB371002182EA /* SearchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListRouter.swift; sourceTree = "<group>"; };
+		C8F567D8221CB578002182EA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +208,7 @@
 				8B0CEE4621B54C8800C39C58 /* Model */,
 				C8F5678F221C9111002182EA /* Network */,
 				C8F567B8221CA361002182EA /* Managers */,
+				C8F567D6221CB550002182EA /* Extensions */,
 				C8F567B1221C9B1F002182EA /* Resources */,
 				8BC33F5021944CDF00E3759C /* Assets.xcassets */,
 				8BC33F5221944CDF00E3759C /* LaunchScreen.storyboard */,
@@ -405,6 +408,22 @@
 				C8F567CA221CB1EB002182EA /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		C8F567D6221CB550002182EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567D7221CB56E002182EA /* UIColor */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C8F567D7221CB56E002182EA /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567D8221CB578002182EA /* UIColor.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -677,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BC33F4C21944CDE00E3759C /* ViewController.swift in Sources */,
+				C8F567D9221CB578002182EA /* UIColor.swift in Sources */,
 				C8F567A0221C9111002182EA /* HTTPCode.swift in Sources */,
 				8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */,
 				C8F567A5221C9111002182EA /* ResultError.swift in Sources */,

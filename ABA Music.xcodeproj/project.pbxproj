@@ -34,6 +34,7 @@
 		C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BA221CA398002182EA /* ReachabilityManager.swift */; };
 		C8F567BE221CA398002182EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BB221CA398002182EA /* Reachability.m */; };
 		C8F567C3221CA909002182EA /* SearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567C2221CA909002182EA /* SearchSuggestion.swift */; };
+		C8F567C5221CA9A1002182EA /* SearchSuggestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567C4221CA9A1002182EA /* SearchSuggestionsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		C8F567BC221CA398002182EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C8F567BF221CA3BF002182EA /* ABA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABA-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8F567C2221CA909002182EA /* SearchSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestion.swift; sourceTree = "<group>"; };
+		C8F567C4221CA9A1002182EA /* SearchSuggestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsManager.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				C8F567C1221CA8F7002182EA /* Data Models */,
+				C8F567C4221CA9A1002182EA /* SearchSuggestionsManager.swift */,
 			);
 			path = "Search Suggestions";
 			sourceTree = "<group>";
@@ -643,6 +646,7 @@
 				8B4699BC21975EE100A82349 /* TrackViewController.swift in Sources */,
 				C8F5679F221C9111002182EA /* RequestManager.swift in Sources */,
 				8BA3CDD5219761CC005264D4 /* PlayerView.swift in Sources */,
+				C8F567C5221CA9A1002182EA /* SearchSuggestionsManager.swift in Sources */,
 				C8F567BE221CA398002182EA /* Reachability.m in Sources */,
 				C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */,
 				8B0EFD0821960BF80024DAA2 /* ArtistCollectionViewCell.swift in Sources */,

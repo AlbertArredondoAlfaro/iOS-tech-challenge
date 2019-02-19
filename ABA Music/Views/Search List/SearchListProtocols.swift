@@ -10,9 +10,15 @@ import Foundation
 
 // View / Presenter
 protocol SearchListViewInjection : class {
+    func showProgress(_ show: Bool, status: String)
+    func showProgress(_ show: Bool)
+    func showMessageWith(title: String, message: String, actionTitle: String)
 }
 
 protocol SearchListPresenterDelegate : class {
+    func viewDidLoad()
+    func searchArtist(_ artist: String?)
+    func artistSelectedAt(_ index: Int)
 }
 
 // Presenter / Interactor

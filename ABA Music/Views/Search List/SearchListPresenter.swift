@@ -24,4 +24,14 @@ class SearchListPresenter {
 }
 
 extension SearchListPresenter: SearchListPresenterDelegate {
+    
+    func viewDidLoad() {
+    }
+    
+    func searchArtist(_ artist: String?) {
+    }
+    
+    func artistSelectedAt(_ index: Int) {
+    }
+    
 }

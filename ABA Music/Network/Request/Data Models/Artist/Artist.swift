@@ -20,30 +20,30 @@ public struct ArtistResponse: Decodable {
     let wrapperType: String
     let kind: String
     let artistId: UInt
-    let collectionId: UInt
+    let collectionId: UInt?
     let trackId: UInt
     let artistName: String
-    let collectionName: String
+    let collectionName: String?
     let trackName: String
-    let collectionCensoredName: String
+    let collectionCensoredName: String?
     let trackCensoredName: String
     let artistViewUrl: String
-    let collectionViewUrl: String
+    let collectionViewUrl: String?
     let trackViewUrl: String
-    let previewUrl: String
+    let previewUrl: String?
     let artworkUrl30: String
     let artworkUrl60: String
     let artworkUrl100: String
-    let collectionPrice: Float
-    let trackPrice: Float
+    let collectionPrice: Float?
+    let trackPrice: Float?
     let releaseDate: String
-    let collectionExplicitness: String
-    let trackExplicitness: String
-    let discCount: UInt
-    let discNumber: UInt
-    let trackCount: UInt
-    let trackNumber: UInt
-    let trackTimeMillis: UInt
+    let collectionExplicitness: String?
+    let trackExplicitness: String?
+    let discCount: UInt?
+    let discNumber: UInt?
+    let trackCount: UInt?
+    let trackNumber: UInt?
+    let trackTimeMillis: UInt?
     let country: String
     let currency: String
     let primaryGenreName: String

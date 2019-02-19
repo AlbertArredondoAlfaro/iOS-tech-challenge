@@ -124,15 +124,14 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
-		8B0CEE4521B54C6900C39C58 /* View */ = {
+		8B0CEE4521B54C6900C39C58 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8BC33F4B21944CDE00E3759C /* ViewController.swift */,
-				8B4699BB21975EE100A82349 /* TrackViewController.swift */,
-				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
+				C8F567B6221C9EC8002182EA /* Search */,
+				C8F567B7221C9ED6002182EA /* Track Detail */,
 				8B0CEE4421B54C5100C39C58 /* cells */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8B0CEE4621B54C8800C39C58 /* Model */ = {
@@ -177,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				8B0CEE4721B5723300C39C58 /* Application */,
+				8B0CEE4521B54C6900C39C58 /* Views */,
 				8B0CEE4621B54C8800C39C58 /* Model */,
-				8B0CEE4521B54C6900C39C58 /* View */,
 				C8F5678F221C9111002182EA /* Network */,
 				C8F567B1221C9B1F002182EA /* Resources */,
 				8BC33F5021944CDF00E3759C /* Assets.xcassets */,
@@ -304,6 +303,23 @@
 				C8F567B4221C9B82002182EA /* Artists.json */,
 			);
 			path = Artists;
+			sourceTree = "<group>";
+		};
+		C8F567B6221C9EC8002182EA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8BC33F4B21944CDE00E3759C /* ViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C8F567B7221C9ED6002182EA /* Track Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8B4699BB21975EE100A82349 /* TrackViewController.swift */,
+				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
+			);
+			path = "Track Detail";
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {

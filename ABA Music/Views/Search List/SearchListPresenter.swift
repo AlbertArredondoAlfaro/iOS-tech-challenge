@@ -67,4 +67,10 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     func artistSelectedAt(_ index: Int) {
     }
     
+    func getSuggestions() {
+    }
+    
+    func suggestionSelectedAt(index: Int) {
+    }
+    
 }

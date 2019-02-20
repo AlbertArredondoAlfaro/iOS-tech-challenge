@@ -16,6 +16,8 @@ class SearchListViewController: BaseViewController {
     private let searchView: SearchView = SearchView()
     private let searchListContainerView: UIView = UIView()
     private var searchListCollectionView: UICollectionView?
+    private let suggestionsView = SuggestionsView()
+    private var suggestionsViewBottomConstraint: NSLayoutConstraint?
     
     private var datasource: SearchListDatasource?
     private var numberOfCellsInARow: Int = 2
@@ -48,6 +50,8 @@ extension SearchListViewController {
      */
     private func configureSubviews() {
         searchView.delegate = self
+        
+        suggestionsView.delegate = self
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
@@ -86,6 +90,14 @@ extension SearchListViewController {
         return cellContainerWidth / CGFloat(numberOfCellsInARow)
     }
     
+    /**
+     * Add observers to the view
+     */
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
 }
 
 // MARK: - Layout & constraints
@@ -107,6 +119,15 @@ extension SearchListViewController {
     }
     
     /**
+     * Internal struct for animation
+     */
+    private struct Animation {
+        
+        static let animationDuration: TimeInterval = 0.25
+        
+    }
+    
+    /**
      * Add subviews
      */
     private func addSubviews() {
@@ -124,6 +145,62 @@ extension SearchListViewController {
             searchListContainerView.addConstraintsWithFormat("H:|[v0]|", views: searchListCollectionView)
             searchListContainerView.addConstraintsWithFormat("V:|[v0]|", views: searchListCollectionView)
         }
+    }
+    
+    /**
+     * Show suggestions
+     *
+     * - parameters:
+     *      -show: show / hide the suggestions
+     *      -height: the height for the suggestions content
+     *      -animated: show / hide suggestions with animation or not
+     */
+    private func showSuggestions(show: Bool, height: CGFloat, animated: Bool) {
+        let animateDuration = animated ? Animation.animationDuration : 0;
+        suggestionsViewBottomConstraint?.constant = height
+        suggestionsView.isHidden = !show
+        UIView.animate(withDuration: animateDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+}
+
+// MARK: - Keyboard actions
+extension SearchListViewController {
+    
+    /**
+     * Control the keyboard will appear action
+     *
+     * - parameters:
+     *      -notification: notification from the keyboard
+     */
+    @objc private func keyboardWillBeAppear(notification: NSNotification) {
+        guard let info:[AnyHashable:Any] = notification.userInfo,
+            let keyboardSize:CGSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size else { return }
+        presenter?.getSuggestions()
+        showSuggestions(show: true, height: -keyboardSize.height, animated: true)
+    }
+    
+    /**
+     * Control the keyboard will be hidden action
+     *
+     * - parameters:
+     *      -notification: notification from the keyboard
+     */
+    @objc private func keyboardWillBeHidden(notification: NSNotification) {
+        showSuggestions(show: false, height: 0.0, animated: true)
+    }
+    
+}
+
+// MARK: - SuggestionsViewDelegate
+extension SearchListViewController: SuggestionsViewDelegate {
+    
+    func suggestionSelectedAt(index: Int) {
+        showSuggestions(show: false, height: 0.0, animated: false)
+        searchView.hideKeyboard()
+        presenter?.suggestionSelectedAt(index: index)
     }
     
 }

@@ -20,6 +20,8 @@ protocol SearchListPresenterDelegate : class {
     func viewDidLoad()
     func searchArtist(_ artist: String?)
     func artistSelectedAt(_ index: Int)
+    func getSuggestions()
+    func suggestionSelectedAt(index: Int)
 }
 
 // Presenter / Interactor

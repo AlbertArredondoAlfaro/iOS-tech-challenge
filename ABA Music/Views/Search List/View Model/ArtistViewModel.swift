@@ -32,8 +32,12 @@ extension ArtistViewModel {
     
     private static func getViewModelWith(_ artistResponse: ArtistResponse) -> ArtistViewModel {
         let artworkUrl = URL(string: artistResponse.artworkUrl100)
+        var releaseYear = ""
+        if let releaseDate = Date.getISODateWithString(artistResponse.releaseDate) {
+            releaseYear = releaseDate.getStringyyyyFormat()
+        }
         
-        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: "2019")
+        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: releaseYear)
     }
     
 }

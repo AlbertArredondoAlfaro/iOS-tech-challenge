@@ -6,13 +6,14 @@ class PlayerView: UIView {
     var movieURL: URL?
     var player: AVPlayer = AVPlayer()
     
-    init() {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupPlayer()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        setupPlayer()
     }
 
     deinit {

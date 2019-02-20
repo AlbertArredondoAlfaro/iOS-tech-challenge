@@ -407,13 +407,13 @@
 		C8F567B7221C9ED6002182EA /* Track Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C8F5681B221DAD36002182EA /* Views */,
 				C8F56811221DA8A4002182EA /* TrackDetailProtocols.swift */,
 				C8F56813221DA90A002182EA /* TrackDetailViewController.swift */,
 				C8F56815221DA91A002182EA /* TrackDetailPresenter.swift */,
 				C8F56817221DA933002182EA /* TrackDetailInteractor.swift */,
 				C8F56819221DA947002182EA /* TrackDetailRouter.swift */,
 				8B4699BB21975EE100A82349 /* TrackViewController.swift */,
-				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
 			);
 			path = "Track Detail";
 			sourceTree = "<group>";
@@ -603,6 +603,14 @@
 				C8F5680B221D843C002182EA /* SuggestionViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C8F5681B221DAD36002182EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {

@@ -12,10 +12,13 @@ class TrackDetailViewController: BaseViewController {
     
     public var presenter: TrackDetailPresenterDelegate?
     
+    private let playerView: PlayerView = PlayerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         configureNavigationBar()
+        presenter?.viewDidLoad()
     }
     
 }
@@ -38,6 +41,7 @@ extension TrackDetailViewController {
      * ConfigureSubviews
      */
     private func configureSubviews() {
+        playerView.backgroundColor = .black()
     }
     
     private func configureNavigationBar() {
@@ -59,10 +63,22 @@ extension TrackDetailViewController {
      * Add subviews
      */
     private func addSubviews() {
+        view.addSubview(playerView)
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: playerView)
+        view.addConstraintsWithFormat("V:|[v0]", views: playerView)
+        playerView.heightAnchor.constraint(equalTo: playerView.widthAnchor, multiplier: 9 / 16).isActive = true
     }
     
 }
 
 extension TrackDetailViewController: TrackDetailViewInjection {
+    
+    func loadTrack(_ track: ArtistViewModel) {
+        if let previewUrl = track.previewUrl {
+            playerView.prepare(with: previewUrl)
+            playerView.play()
+        }
+    }
     
 }

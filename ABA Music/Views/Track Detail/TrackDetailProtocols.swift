@@ -10,9 +10,11 @@ import Foundation
 
 // View / Presenter
 protocol TrackDetailViewInjection : class {
+    func loadTrack(_ track: ArtistViewModel)
 }
 
 protocol TrackDetailPresenterDelegate : class {
+    func viewDidLoad()
 }
 
 // Presenter / Interactor

@@ -31,7 +31,7 @@ class TrackDetailInfoView: UIView {
         artistNameLabel.text = viewModel.artistName
         artistNameLabel.numberOfLines = 0
         
-        trackInformationLabel.text = "Rock Oct 9, 2012"
+        trackInformationLabel.text = "\(viewModel.primaryGenreName) \(viewModel.releaseDate)"
         trackInformationLabel.numberOfLines = 0
     }
     

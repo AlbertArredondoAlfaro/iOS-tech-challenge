@@ -39,8 +39,10 @@ extension ArtistViewModel {
     private static func getViewModelWith(_ artistResponse: ArtistResponse) -> ArtistViewModel {
         let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
         var releaseYear = ""
+        var date = ""
         if let releaseDate = Date.getISODateWithString(artistResponse.releaseDate) {
             releaseYear = releaseDate.getStringyyyyFormat()
+            date = releaseDate.getStringMMMddyyyyFormat()
         }
         
         var previewUrl: URL?
@@ -48,7 +50,7 @@ extension ArtistViewModel {
             previewUrl = URL(string: url)
         }
         
-        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: releaseYear, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName)
+        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName)
     }
     
 }

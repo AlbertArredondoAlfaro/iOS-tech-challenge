@@ -45,7 +45,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
     public func bindWithViewModel(_ viewModel: ArtistViewModel) {
         configureArtWorkWithUrl(viewModel.artworkUrl)
         trackNameLabel.text = viewModel.trackName
-        releaseDateLabel.text = viewModel.releaseDate
+        releaseDateLabel.text = viewModel.releaseYear
     }
     
 }

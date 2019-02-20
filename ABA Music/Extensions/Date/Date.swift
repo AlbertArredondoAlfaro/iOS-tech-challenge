@@ -23,4 +23,10 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    public func getStringMMMddyyyyFormat() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
 }

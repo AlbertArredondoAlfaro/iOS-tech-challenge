@@ -70,6 +70,7 @@
 		C8F5681A221DA947002182EA /* TrackDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56819221DA947002182EA /* TrackDetailRouter.swift */; };
 		C8F5681E221DD043002182EA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5681D221DD043002182EA /* ImageManager.swift */; };
 		C8F56821221DD22E002182EA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56820221DD22E002182EA /* String.swift */; };
+		C8F56824221DD4BF002182EA /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56823221DD4BF002182EA /* ImageManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,7 @@
 		C8F56819221DA947002182EA /* TrackDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailRouter.swift; sourceTree = "<group>"; };
 		C8F5681D221DD043002182EA /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C8F56820221DD22E002182EA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C8F56823221DD4BF002182EA /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -275,6 +277,7 @@
 		8BC33F5D21944CDF00E3759C /* ABA MusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				C8F56822221DD4A6002182EA /* Image */,
 				C8F567C6221CAA09002182EA /* Suggestions */,
 				C8F567AE221C9456002182EA /* Network */,
 				8BC33F6021944CDF00E3759C /* Info.plist */,
@@ -635,6 +638,14 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		C8F56822221DD4A6002182EA /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C8F56823221DD4BF002182EA /* ImageManagerTests.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,6 +981,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F56824221DD4BF002182EA /* ImageManagerTests.swift in Sources */,
 				C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */,
 				C8F567C8221CAA1A002182EA /* SuggestionsTests.swift in Sources */,
 			);

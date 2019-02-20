@@ -14,14 +14,16 @@ class SearchListInteractor {
     
     private let requestManager: RequestManager
     private var artistsViewModel: [ArtistViewModel]
+    private var suggestions: [SuggestionViewModel]
     
     convenience init() {
-        self.init(requestManager: RequestManager(), artistsViewModel: [ArtistViewModel]())
+        self.init(requestManager: RequestManager(), artistsViewModel: [ArtistViewModel](), suggestions: [SuggestionViewModel]())
     }
     
-    init(requestManager: RequestManager, artistsViewModel: [ArtistViewModel]) {
+    init(requestManager: RequestManager, artistsViewModel: [ArtistViewModel], suggestions: [SuggestionViewModel]) {
         self.requestManager = requestManager
         self.artistsViewModel = artistsViewModel
+        self.suggestions = suggestions
     }
     
 }
@@ -41,6 +43,11 @@ extension SearchListInteractor {
         self.artistsViewModel.append(contentsOf: artistsViewModel)
     }
     
+    private func saveSearch(_ search: String?) {
+        guard let search = search else { return }
+        SearchSuggestionsManager.shared.saveSuggestion(search)
+    }
+    
 }
 
 extension SearchListInteractor: SearchListInteractorDelegate {
@@ -57,6 +64,9 @@ extension SearchListInteractor: SearchListInteractorDelegate {
                 }
                 
                 self.updateArtistsWith(response.results)
+                if !response.results.isEmpty {
+                    self.saveSearch(search)
+                }
                 completion(self.artistsViewModel, true, nil)
             case .failure(let error):
                 completion(nil, false, error)
@@ -71,6 +81,18 @@ extension SearchListInteractor: SearchListInteractorDelegate {
     func getRecipeSelectedAt(_ index: Int) -> ArtistViewModel? {
         if !artistsViewModel.indices.contains(index) { return nil }
         return artistsViewModel[index]
+    }
+    
+    func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock) {
+        let allSuggestions = SearchSuggestionsManager.shared.getSuggestions()
+        suggestions = SuggestionViewModel.getViewModelsWith(suggestions: allSuggestions)
+        completion(suggestions)
+    }
+    
+    func getSuggestionAt(index: Int) -> SuggestionViewModel? {
+        if !suggestions.indices.contains(index) { return nil }
+        
+        return suggestions[index]
     }
     
 }

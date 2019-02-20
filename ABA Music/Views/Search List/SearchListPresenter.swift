@@ -68,9 +68,17 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     }
     
     func getSuggestions() {
+        interactor.getAllSuggestions { [weak self] (suggestions) in
+            guard let `self` = self else { return }
+            self.view?.loadSuggestions(suggestions)
+        }
     }
     
-    func suggestionSelectedAt(index: Int) {
+    func suggestionSelectedAt(_ index: Int) {
+        guard let suggestion = interactor.getSuggestionAt(index: index) else {
+            return
+        }
+        searchArtist(suggestion.suggestion)
     }
     
 }

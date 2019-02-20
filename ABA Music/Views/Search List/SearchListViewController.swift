@@ -24,6 +24,7 @@ class SearchListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addObservers()
         setupViews()
         configureNavigationBar()
         presenter?.viewDidLoad()
@@ -51,6 +52,7 @@ extension SearchListViewController {
     private func configureSubviews() {
         searchView.delegate = self
         
+        suggestionsView.isHidden = true
         suggestionsView.delegate = self
         
         let flowLayout = UICollectionViewFlowLayout()
@@ -133,6 +135,7 @@ extension SearchListViewController {
     private func addSubviews() {
         view.addSubview(searchView)
         view.addSubview(searchListContainerView)
+        view.addSubview(suggestionsView)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: searchView)
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
@@ -145,6 +148,12 @@ extension SearchListViewController {
             searchListContainerView.addConstraintsWithFormat("H:|[v0]|", views: searchListCollectionView)
             searchListContainerView.addConstraintsWithFormat("V:|[v0]|", views: searchListCollectionView)
         }
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: suggestionsView)
+        view.addConstraintsWithFormat("V:[v0][v1]", views: searchView, suggestionsView)
+        let suggestionsViewBottomConstraint = NSLayoutConstraint(item: suggestionsView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(suggestionsViewBottomConstraint)
+        self.suggestionsViewBottomConstraint = suggestionsViewBottomConstraint
     }
     
     /**
@@ -200,7 +209,7 @@ extension SearchListViewController: SuggestionsViewDelegate {
     func suggestionSelectedAt(index: Int) {
         showSuggestions(show: false, height: 0.0, animated: false)
         searchView.hideKeyboard()
-        presenter?.suggestionSelectedAt(index: index)
+        presenter?.suggestionSelectedAt(index)
     }
     
 }
@@ -265,6 +274,10 @@ extension SearchListViewController: SearchListViewInjection {
         
         datasource?.items = viewModels
         searchListCollectionView?.reloadData()
+    }
+    
+    func loadSuggestions(_ suggestions: [SuggestionViewModel]) {
+        suggestionsView.suggestions = suggestions
     }
     
 }

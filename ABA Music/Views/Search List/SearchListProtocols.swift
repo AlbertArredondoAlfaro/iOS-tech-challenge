@@ -14,6 +14,7 @@ protocol SearchListViewInjection : class {
     func showProgress(_ show: Bool)
     func showMessageWith(title: String, message: String, actionTitle: String)
     func loadArtists(_ viewModels: [ArtistViewModel], fromBeginning: Bool)
+    func loadSuggestions(_ suggestions: [SuggestionViewModel])
 }
 
 protocol SearchListPresenterDelegate : class {
@@ -21,17 +22,20 @@ protocol SearchListPresenterDelegate : class {
     func searchArtist(_ artist: String?)
     func artistSelectedAt(_ index: Int)
     func getSuggestions()
-    func suggestionSelectedAt(index: Int)
+    func suggestionSelectedAt(_ index: Int)
 }
 
 // Presenter / Interactor
 
 typealias ArtistsGetArtistsCompletionBlock = (_ viewModel: [ArtistViewModel]?, _ success: Bool, _ error: ResultError?) -> Void
+typealias TrackListGetSuggestionsCompletionBlock = ([SuggestionViewModel]) -> Void
 
 protocol SearchListInteractorDelegate : class {
     func getArtistsList(search: String?, completion: @escaping ArtistsGetArtistsCompletionBlock)
     func clear()
     func getRecipeSelectedAt(_ index: Int) -> ArtistViewModel?
+    func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)
+    func getSuggestionAt(index: Int) -> SuggestionViewModel?
 }
 
 // Presenter / Router

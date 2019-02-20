@@ -14,7 +14,6 @@
 		8B4699BC21975EE100A82349 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4699BB21975EE100A82349 /* TrackViewController.swift */; };
 		8BA3CDD5219761CC005264D4 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3CDD4219761CB005264D4 /* PlayerView.swift */; };
 		8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC33F4921944CDE00E3759C /* AppDelegate.swift */; };
-		8BC33F4C21944CDE00E3759C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC33F4B21944CDE00E3759C /* ViewController.swift */; };
 		8BC33F5121944CDF00E3759C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC33F5021944CDF00E3759C /* Assets.xcassets */; };
 		8BC33F5421944CDF00E3759C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC33F5221944CDF00E3759C /* LaunchScreen.storyboard */; };
 		8BC33F6A21944CDF00E3759C /* ABA_MusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC33F6921944CDF00E3759C /* ABA_MusicUITests.swift */; };
@@ -95,7 +94,6 @@
 		8BA3CDD4219761CB005264D4 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		8BC33F4621944CDE00E3759C /* ABA Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABA Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC33F4921944CDE00E3759C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BC33F4B21944CDE00E3759C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BC33F5021944CDF00E3759C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BC33F5321944CDF00E3759C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BC33F5521944CDF00E3759C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -392,7 +390,6 @@
 				C8F567D0221CB351002182EA /* SearchListPresenter.swift */,
 				C8F567D2221CB360002182EA /* SearchListInteractor.swift */,
 				C8F567D4221CB371002182EA /* SearchListRouter.swift */,
-				8BC33F4B21944CDE00E3759C /* ViewController.swift */,
 			);
 			path = "Search List";
 			sourceTree = "<group>";
@@ -874,7 +871,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BC33F4C21944CDE00E3759C /* ViewController.swift in Sources */,
 				C8F567D9221CB578002182EA /* UIColor.swift in Sources */,
 				C8F567FF221D6623002182EA /* TrackHeaderView.swift in Sources */,
 				C8F567A0221C9111002182EA /* HTTPCode.swift in Sources */,

@@ -40,4 +40,5 @@ protocol SearchListInteractorDelegate : class {
 
 // Presenter / Router
 protocol SearchListRouterDelegate : class {
+    func showTrackDetail(_ viewModel: ArtistViewModel)
 }

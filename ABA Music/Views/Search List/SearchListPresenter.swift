@@ -69,7 +69,7 @@ extension SearchListPresenter: SearchListPresenterDelegate {
             return
         }
         
-        print("TO DO")
+        router.showTrackDetail(trackSelected)
     }
     
     func getSuggestions() {

@@ -56,6 +56,8 @@
 		C8F567F4221D6002002182EA /* InterUI-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F567EC221D6002002182EA /* InterUI-Italic.ttf */; };
 		C8F567F7221D60A3002182EA /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567F6221D60A3002182EA /* UIFont.swift */; };
 		C8F567FA221D629F002182EA /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567F9221D629F002182EA /* TrackCollectionViewCell.swift */; };
+		C8F567FC221D64B2002182EA /* SearchListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567FB221D64B2002182EA /* SearchListDatasource.swift */; };
+		C8F567FF221D6623002182EA /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567FE221D6623002182EA /* TrackHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		C8F567EC221D6002002182EA /* InterUI-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Italic.ttf"; sourceTree = "<group>"; };
 		C8F567F6221D60A3002182EA /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		C8F567F9221D629F002182EA /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8F567FB221D64B2002182EA /* SearchListDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListDatasource.swift; sourceTree = "<group>"; };
+		C8F567FE221D6623002182EA /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -367,10 +371,12 @@
 		C8F567B6221C9EC8002182EA /* Search List */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567FD221D660C002182EA /* Header View */,
 				C8F567F8221D60FF002182EA /* Cell */,
 				C8F567DA221CB9F4002182EA /* View Model */,
 				C8F567CC221CB2B7002182EA /* SearchListProtocols.swift */,
 				C8F567CE221CB300002182EA /* SearchListViewController.swift */,
+				C8F567FB221D64B2002182EA /* SearchListDatasource.swift */,
 				C8F567D0221CB351002182EA /* SearchListPresenter.swift */,
 				C8F567D2221CB360002182EA /* SearchListInteractor.swift */,
 				C8F567D4221CB371002182EA /* SearchListRouter.swift */,
@@ -519,6 +525,14 @@
 				C8F567F9221D629F002182EA /* TrackCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C8F567FD221D660C002182EA /* Header View */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567FE221D6623002182EA /* TrackHeaderView.swift */,
+			);
+			path = "Header View";
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -800,12 +814,14 @@
 			files = (
 				8BC33F4C21944CDE00E3759C /* ViewController.swift in Sources */,
 				C8F567D9221CB578002182EA /* UIColor.swift in Sources */,
+				C8F567FF221D6623002182EA /* TrackHeaderView.swift in Sources */,
 				C8F567A0221C9111002182EA /* HTTPCode.swift in Sources */,
 				8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */,
 				C8F567A5221C9111002182EA /* ResultError.swift in Sources */,
 				C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */,
 				C8F567A3221C9111002182EA /* RequestProtocol.swift in Sources */,
 				C8F567A1221C9111002182EA /* NetworkHeaders.swift in Sources */,
+				C8F567FC221D64B2002182EA /* SearchListDatasource.swift in Sources */,
 				C8F567C3221CA909002182EA /* SearchSuggestion.swift in Sources */,
 				8B4699BC21975EE100A82349 /* TrackViewController.swift in Sources */,
 				C8F567E0221D5C60002182EA /* SearchView.swift in Sources */,

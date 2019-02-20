@@ -54,6 +54,7 @@
 		C8F567F2221D6002002182EA /* InterUI-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F567EA221D6002002182EA /* InterUI-Medium.ttf */; };
 		C8F567F3221D6002002182EA /* InterUI-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F567EB221D6002002182EA /* InterUI-Regular.ttf */; };
 		C8F567F4221D6002002182EA /* InterUI-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F567EC221D6002002182EA /* InterUI-Italic.ttf */; };
+		C8F567F7221D60A3002182EA /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567F6221D60A3002182EA /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		C8F567EA221D6002002182EA /* InterUI-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Medium.ttf"; sourceTree = "<group>"; };
 		C8F567EB221D6002002182EA /* InterUI-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Regular.ttf"; sourceTree = "<group>"; };
 		C8F567EC221D6002002182EA /* InterUI-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Italic.ttf"; sourceTree = "<group>"; };
+		C8F567F6221D60A3002182EA /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -438,6 +440,7 @@
 		C8F567D6221CB550002182EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567F5221D6095002182EA /* UIFont */,
 				C8F567E1221D5C8B002182EA /* UIView */,
 				C8F567D7221CB56E002182EA /* UIColor */,
 			);
@@ -497,6 +500,14 @@
 				C8F567EC221D6002002182EA /* InterUI-Italic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C8F567F5221D6095002182EA /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567F6221D60A3002182EA /* UIFont.swift */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -804,6 +815,7 @@
 				8B0CEE4321B54C2700C39C58 /* Entities.swift in Sources */,
 				C8F567AB221C915D002182EA /* Artist.swift in Sources */,
 				8B0EFD0A21960E5D0024DAA2 /* TrackCollectionViewCell.swift in Sources */,
+				C8F567F7221D60A3002182EA /* UIFont.swift in Sources */,
 				C8F567A6221C9111002182EA /* EndPoint.swift in Sources */,
 				C8F567A2221C9111002182EA /* Result.swift in Sources */,
 				C8F567A4221C9111002182EA /* RequestErrors.swift in Sources */,

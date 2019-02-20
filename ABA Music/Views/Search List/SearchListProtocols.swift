@@ -20,7 +20,7 @@ protocol SearchListViewInjection : class {
 protocol SearchListPresenterDelegate : class {
     func viewDidLoad()
     func searchArtist(_ artist: String?)
-    func artistSelectedAt(_ index: Int)
+    func artistSelectedAt(section: Int, index: Int)
     func getSuggestions()
     func suggestionSelectedAt(_ index: Int)
 }
@@ -33,7 +33,7 @@ typealias TrackListGetSuggestionsCompletionBlock = ([SuggestionViewModel]) -> Vo
 protocol SearchListInteractorDelegate : class {
     func getArtistsList(search: String?, completion: @escaping ArtistsGetArtistsCompletionBlock)
     func clear()
-    func getRecipeSelectedAt(_ index: Int) -> ArtistViewModel?
+    func getTrackSelectedAt(section: Int, index: Int) -> ArtistViewModel?
     func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)
     func getSuggestionAt(index: Int) -> SuggestionViewModel?
 }

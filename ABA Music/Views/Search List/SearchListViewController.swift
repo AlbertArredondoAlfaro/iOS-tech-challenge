@@ -240,7 +240,7 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("TO DO")
+        presenter?.artistSelectedAt(section: indexPath.section, index: indexPath.row)
     }
     
 }

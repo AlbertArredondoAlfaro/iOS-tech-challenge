@@ -78,9 +78,17 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         artistsViewModel = []
     }
     
-    func getRecipeSelectedAt(_ index: Int) -> ArtistViewModel? {
-        if !artistsViewModel.indices.contains(index) { return nil }
-        return artistsViewModel[index]
+    func getTrackSelectedAt(section: Int, index: Int) -> ArtistViewModel? {
+        let dictionary = Dictionary(grouping: artistsViewModel, by: { $0.artistName })
+        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
+        
+        guard let tracks = dictionary[keysArray[section]] else {
+            return nil
+        }
+        
+        if !tracks.indices.contains(index) { return nil }
+        
+        return tracks[index]
     }
     
     func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock) {

@@ -56,7 +56,7 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     
     func viewDidLoad() {
         interactor.clear()
-        getArtists("Jackson", showProgress: true)
+        getArtists("the beatles", showProgress: true)
     }
     
     func searchArtist(_ artist: String?) {
@@ -64,7 +64,12 @@ extension SearchListPresenter: SearchListPresenterDelegate {
         getArtists(artist, showProgress: true)
     }
     
-    func artistSelectedAt(_ index: Int) {
+    func artistSelectedAt(section: Int, index: Int) {
+        guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index) else {
+            return
+        }
+        
+        print("TO DO")
     }
     
     func getSuggestions() {

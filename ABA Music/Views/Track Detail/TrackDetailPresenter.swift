@@ -11,10 +11,12 @@ import Foundation
 class TrackDetailPresenter {
     
     private weak var view: TrackDetailViewInjection?
+    private let track: ArtistViewModel
    
     // MARK - Lifecycle
-    init(view: TrackDetailViewInjection, navigationController: UINavigationController? = nil) {
+    init(view: TrackDetailViewInjection, track: ArtistViewModel, navigationController: UINavigationController? = nil) {
         self.view = view
+        self.track = track
     }
     
 }

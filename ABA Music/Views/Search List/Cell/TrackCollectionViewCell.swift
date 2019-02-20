@@ -34,6 +34,18 @@ class TrackCollectionViewCell: UICollectionViewCell {
     }
     
     public func bindWithViewModel(_ viewModel: ArtistViewModel) {
+        configureArtWorkWithUrl(viewModel.artworkUrl)
+    }
+    
+}
+
+extension TrackCollectionViewCell {
+    
+    private func configureArtWorkWithUrl(_ url: URL?) {
+        guard let url = url else {
+            return
+        }
+        trackImageView.hnk_setImage(from: url, placeholder: nil)
     }
     
 }
@@ -60,9 +72,13 @@ extension TrackCollectionViewCell {
      * Configure the elements inside the component
      */
     private func configureSubviews() {
-        backgroundColor = .clear
+        backgroundColor = .red
         
-        trackImageView.backgroundColor = .yellow
+        trackImageView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
+        trackImageView.backgroundColor = .clear
+        trackImageView.contentMode = .scaleAspectFill
+        trackImageView.layer.cornerRadius = 8.0
+        trackImageView.clipsToBounds = true
     }
     
     /**

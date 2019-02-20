@@ -50,7 +50,6 @@ extension SearchListViewController {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
-        flowLayout.estimatedItemSize = CGSize(width: getPostCellSide(), height: 200.0)
         searchListCollectionView = UICollectionView(frame: searchListContainerView.bounds, collectionViewLayout: flowLayout)
         searchListCollectionView?.backgroundColor = .clear
         searchListCollectionView?.isUserInteractionEnabled = true
@@ -76,7 +75,7 @@ extension SearchListViewController {
     }
     
     private func getPostCellSide() -> CGFloat {
-        let screenWidth: CGFloat = UIScreen.main.bounds.width / CGFloat(numberOfCellsInARow)
+        let screenWidth: CGFloat = UIScreen.main.bounds.width
         let cellContainerWidth: CGFloat = screenWidth - Layout.CollectionViewCell.centerSpacing*(CGFloat(numberOfCellsInARow-1)) - Layout.CollectionViewCell.edgeSpacingLeft*CGFloat(numberOfCellsInARow)
         return cellContainerWidth / CGFloat(numberOfCellsInARow)
     }
@@ -125,6 +124,12 @@ extension SearchListViewController {
 
 // MARK:- UICollectionViewDelegate (with UICollectionViewDelegateFlowLayout)
 extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let side = getPostCellSide()
+        
+        return CGSize(width: side, height: 200.0)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: Layout.CollectionViewCell.edgeSpacingTop, left: Layout.CollectionViewCell.edgeSpacingLeft, bottom: Layout.CollectionViewCell.edgeSpacingBottom, right: Layout.CollectionViewCell.edgeSpacingRight)

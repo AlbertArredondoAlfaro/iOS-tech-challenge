@@ -17,6 +17,9 @@ def abaMusicPods
     
     #Realm
     pod 'RealmSwift', '~> 3.13.1'
+    
+    #Haneke
+    pod 'Haneke', '~> 1.0'
 end
 
 target 'ABA Music' do

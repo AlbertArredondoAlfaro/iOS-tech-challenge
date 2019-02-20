@@ -51,7 +51,7 @@ class ArtistCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, 
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
         collectionView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
         collectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
-        collectionView.register(TrackCollectionViewCell.self, forCellWithReuseIdentifier: "trackCell")
+        collectionView.register(OlderTrackCollectionViewCell.self, forCellWithReuseIdentifier: "trackCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
@@ -70,7 +70,7 @@ class ArtistCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trackCell", for: indexPath) as! TrackCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trackCell", for: indexPath) as! OlderTrackCollectionViewCell
         cell.track = artist!.tracks[indexPath.row]
         cell.delegate = self
         cell.layer.borderColor = UIColor.blue.cgColor

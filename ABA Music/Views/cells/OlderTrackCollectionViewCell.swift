@@ -5,7 +5,7 @@ protocol TrackCollectionViewCellDelegate {
     func didPressTrack(_ track: Track)
 }
 
-class TrackCollectionViewCell: UICollectionViewCell {
+class OlderTrackCollectionViewCell: UICollectionViewCell {
     
     var delegate: TrackCollectionViewCellDelegate?
     

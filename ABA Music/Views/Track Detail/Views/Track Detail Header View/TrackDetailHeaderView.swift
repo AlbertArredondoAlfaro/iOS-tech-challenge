@@ -48,6 +48,7 @@ extension TrackDetailHeaderView {
     }
     
     private func configureSubviews() {
+        showInItunesButton.titleLabel?.font = UIFont.regularWithSize(size: 16.0)
         showInItunesButton.layer.cornerRadius = 10.0
         showInItunesButton.layer.borderWidth = 1.0
         showInItunesButton.layer.borderColor = UIColor.white().cgColor

@@ -14,6 +14,7 @@ class TrackDetailViewController: BaseViewController {
     
     private let playerView: PlayerView = PlayerView()
     private let trackDetailHeaderView: TrackDetailHeaderView = TrackDetailHeaderView()
+    private let trackDetailInfoView: TrackDetailInfoView = TrackDetailInfoView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,7 @@ extension TrackDetailViewController {
     private func addSubviews() {
         view.addSubview(playerView)
         view.addSubview(trackDetailHeaderView)
+        view.addSubview(trackDetailInfoView)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: playerView)
         view.addConstraintsWithFormat("V:|[v0]", views: playerView)
@@ -73,6 +75,9 @@ extension TrackDetailViewController {
         
         view.addConstraintsWithFormat("H:|[v0]|", views: trackDetailHeaderView)
         view.addConstraintsWithFormat("V:[v0][v1(\(trackDetailHeaderView.height))]", views: playerView, trackDetailHeaderView)
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: trackDetailInfoView)
+        view.addConstraintsWithFormat("V:[v0][v1(>=0.0)]", views: trackDetailHeaderView, trackDetailInfoView)
     }
     
 }
@@ -84,6 +89,8 @@ extension TrackDetailViewController: TrackDetailViewInjection {
             playerView.prepare(with: previewUrl)
             playerView.play()
         }
+        
+        trackDetailInfoView.bindWithViewModel(track)
     }
     
 }

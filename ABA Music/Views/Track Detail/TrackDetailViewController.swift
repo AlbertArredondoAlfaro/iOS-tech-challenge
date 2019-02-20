@@ -13,6 +13,7 @@ class TrackDetailViewController: BaseViewController {
     public var presenter: TrackDetailPresenterDelegate?
     
     private let playerView: PlayerView = PlayerView()
+    private let trackDetailHeaderView: TrackDetailHeaderView = TrackDetailHeaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,10 +65,14 @@ extension TrackDetailViewController {
      */
     private func addSubviews() {
         view.addSubview(playerView)
+        view.addSubview(trackDetailHeaderView)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: playerView)
         view.addConstraintsWithFormat("V:|[v0]", views: playerView)
         playerView.heightAnchor.constraint(equalTo: playerView.widthAnchor, multiplier: 9 / 16).isActive = true
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: trackDetailHeaderView)
+        view.addConstraintsWithFormat("V:[v0][v1(\(trackDetailHeaderView.height))]", views: playerView, trackDetailHeaderView)
     }
     
 }

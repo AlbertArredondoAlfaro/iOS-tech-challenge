@@ -67,6 +67,7 @@
 		C8F5681E221DD043002182EA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5681D221DD043002182EA /* ImageManager.swift */; };
 		C8F56821221DD22E002182EA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56820221DD22E002182EA /* String.swift */; };
 		C8F56824221DD4BF002182EA /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56823221DD4BF002182EA /* ImageManagerTests.swift */; };
+		C8F56827221DDB27002182EA /* TrackDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56826221DDB27002182EA /* TrackDetailHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		C8F5681D221DD043002182EA /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C8F56820221DD22E002182EA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C8F56823221DD4BF002182EA /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
+		C8F56826221DDB27002182EA /* TrackDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailHeaderView.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -589,6 +591,7 @@
 		C8F5681B221DAD36002182EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C8F56825221DDB0C002182EA /* Track Detail Header View */,
 				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
 			);
 			path = Views;
@@ -616,6 +619,14 @@
 				C8F56823221DD4BF002182EA /* ImageManagerTests.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		C8F56825221DDB0C002182EA /* Track Detail Header View */ = {
+			isa = PBXGroup;
+			children = (
+				C8F56826221DDB27002182EA /* TrackDetailHeaderView.swift */,
+			);
+			path = "Track Detail Header View";
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -900,6 +911,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8F567D9221CB578002182EA /* UIColor.swift in Sources */,
+				C8F56827221DDB27002182EA /* TrackDetailHeaderView.swift in Sources */,
 				C8F567FF221D6623002182EA /* TrackHeaderView.swift in Sources */,
 				C8F567A0221C9111002182EA /* HTTPCode.swift in Sources */,
 				8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */,

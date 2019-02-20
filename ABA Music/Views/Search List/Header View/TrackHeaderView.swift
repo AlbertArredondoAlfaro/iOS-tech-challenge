@@ -51,7 +51,7 @@ extension TrackHeaderView {
     }
     
     private func setupViews() {
-        backgroundColor = .white
+        backgroundColor = .black()
         
         configureSubviews()
         addSubviews()
@@ -60,7 +60,7 @@ extension TrackHeaderView {
     private func configureSubviews() {
         topSeparatorImageView.image = UIImage(named: "SeparatorLine")
         titleLabel.font = UIFont.mediumWithSize(size: 16.0)
-        titleLabel.textColor = .black()
+        titleLabel.textColor = .white()
         bottomSeparatorImageView.image = UIImage(named: "SeparatorLine")
     }
     

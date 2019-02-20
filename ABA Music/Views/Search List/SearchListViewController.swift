@@ -35,7 +35,7 @@ extension SearchListViewController {
      * SetupViews
      */
     private func setupViews() {
-        view.backgroundColor = .white()
+        view.backgroundColor = .black()
         edgesForExtendedLayout = []
         
         configureSubviews()
@@ -128,7 +128,7 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let side = getPostCellSide()
         
-        return CGSize(width: side, height: 200.0)
+        return CGSize(width: side, height: TrackCollectionViewCell.getHeight(for: side))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -12,6 +12,7 @@ class SearchListViewController: BaseViewController {
     
     public var presenter: SearchListPresenterDelegate?
     
+    private let customTitleView: CustomTitleView = CustomTitleView()
     private let searchView: SearchView = SearchView()
     private let searchListContainerView: UIView = UIView()
     private var searchListCollectionView: UICollectionView?
@@ -60,6 +61,11 @@ extension SearchListViewController {
     }
     
     private func configureNavigationBar() {
+        customTitleView.titleColor = .white()
+        customTitleView.setTitle("ABA Music")
+        customTitleView.subtitleColor = .white()
+        customTitleView.setSubtitle("ABA English©")
+        navigationItem.titleView = customTitleView
     }
     
     private func registerCells() {
@@ -111,7 +117,7 @@ extension SearchListViewController {
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: searchListContainerView)
-        view.addConstraintsWithFormat("V:[v0][v1]|", views: searchView, searchListContainerView)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1]|", views: searchView, searchListContainerView)
         
         if let searchListCollectionView = searchListCollectionView {
             searchListContainerView.addSubview(searchListCollectionView)

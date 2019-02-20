@@ -60,6 +60,8 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     }
     
     func searchArtist(_ artist: String?) {
+        interactor.clear()
+        getArtists(artist, showProgress: true)
     }
     
     func artistSelectedAt(_ index: Int) {

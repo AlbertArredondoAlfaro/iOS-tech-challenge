@@ -12,6 +12,8 @@ class SearchListViewController: BaseViewController {
     
     public var presenter: SearchListPresenterDelegate?
     
+    private let searchView: SearchView = SearchView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -66,6 +68,10 @@ extension SearchListViewController {
      * Add subviews
      */
     private func addSubviews() {
+        view.addSubview(searchView)
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: searchView)
+        view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
     }
     
 }

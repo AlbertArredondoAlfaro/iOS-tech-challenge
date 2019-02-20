@@ -41,6 +41,7 @@ extension SearchListViewController {
      * ConfigureSubviews
      */
     private func configureSubviews() {
+        searchView.delegate = self
     }
     
     private func configureNavigationBar() {
@@ -72,6 +73,14 @@ extension SearchListViewController {
         
         view.addConstraintsWithFormat("H:|[v0]|", views: searchView)
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
+    }
+    
+}
+
+extension SearchListViewController: SearchViewDelegate {
+    
+    func searchButtonPressedWithSearch(_ search: String?) {
+        presenter?.searchArtist(search)
     }
     
 }

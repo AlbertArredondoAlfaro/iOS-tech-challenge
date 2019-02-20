@@ -45,6 +45,7 @@
 		C8F567D9221CB578002182EA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D8221CB578002182EA /* UIColor.swift */; };
 		C8F567DC221CBA52002182EA /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567DB221CBA52002182EA /* ArtistViewModel.swift */; };
 		C8F567E0221D5C60002182EA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567DF221D5C60002182EA /* SearchView.swift */; };
+		C8F567E3221D5C99002182EA /* UIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567E2221D5C99002182EA /* UIVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		C8F567D8221CB578002182EA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C8F567DB221CBA52002182EA /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		C8F567DF221D5C60002182EA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C8F567E2221D5C99002182EA /* UIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIew.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -419,6 +421,7 @@
 		C8F567D6221CB550002182EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8F567E1221D5C8B002182EA /* UIView */,
 				C8F567D7221CB56E002182EA /* UIColor */,
 			);
 			path = Extensions;
@@ -454,6 +457,14 @@
 				C8F567DF221D5C60002182EA /* SearchView.swift */,
 			);
 			path = "Search View";
+			sourceTree = "<group>";
+		};
+		C8F567E1221D5C8B002182EA /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C8F567E2221D5C99002182EA /* UIVIew.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -749,6 +760,7 @@
 				C8F567CB221CB1EB002182EA /* BaseViewController.swift in Sources */,
 				C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */,
 				8B0EFD0821960BF80024DAA2 /* ArtistCollectionViewCell.swift in Sources */,
+				C8F567E3221D5C99002182EA /* UIVIew.swift in Sources */,
 				8B0CEE4321B54C2700C39C58 /* Entities.swift in Sources */,
 				C8F567AB221C915D002182EA /* Artist.swift in Sources */,
 				8B0EFD0A21960E5D0024DAA2 /* TrackCollectionViewCell.swift in Sources */,

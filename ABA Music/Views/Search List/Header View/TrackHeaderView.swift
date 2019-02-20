@@ -8,11 +8,18 @@
 
 import UIKit
 
-class TrackHeaderView: UIView {
+class TrackHeaderView: UICollectionReusableView {
     
     private let topSeparatorImageView: UIImageView = UIImageView()
     private let titleLabel: UILabel = UILabel()
     private let bottomSeparatorImageView: UIImageView = UIImageView()
+    
+    /**
+     * Identifier for reusable cells
+     */
+    static public var identifier : String {
+        return String(describing: self)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

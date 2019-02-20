@@ -33,6 +33,9 @@ class TrackCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
     }
     
+    public func bindWithViewModel(_ viewModel: ArtistViewModel) {
+    }
+    
 }
 
 // MARK:- Layout & Constraints

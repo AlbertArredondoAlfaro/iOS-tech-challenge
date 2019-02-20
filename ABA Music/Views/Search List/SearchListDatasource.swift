@@ -43,10 +43,6 @@ extension SearchListDatasource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let elementsPerSection = dictionary[keysArray[section]] else {
             return 0
         }
@@ -60,22 +56,19 @@ extension SearchListDatasource: UICollectionViewDataSource {
         
         if let elementsPerSection = dictionary[keysArray[indexPath.section]]  {
             let viewModel = elementsPerSection[indexPath.row]
+            cell.bindWithViewModel(viewModel)
         }
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = TrackHeaderView()
-        if let elementsPerSection = dictionary[keysArray[section]]  {
-            let viewModel = elementsPerSection[0]
-            headerView.title = viewModel.artistName
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TrackHeaderView.identifier, for: indexPath) as? TrackHeaderView, let elementsPerSection = dictionary[keysArray[indexPath.section]] else {
+            return UICollectionReusableView()
         }
+        let viewModel = elementsPerSection[0]
+        headerView.title = viewModel.artistName
         return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return TrackHeaderView.height
     }
     
 }

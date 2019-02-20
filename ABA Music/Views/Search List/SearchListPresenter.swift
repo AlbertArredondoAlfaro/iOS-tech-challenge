@@ -56,7 +56,7 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     
     func viewDidLoad() {
         interactor.clear()
-        getArtists("The beatles", showProgress: true)
+        getArtists("Jackson", showProgress: true)
     }
     
     func searchArtist(_ artist: String?) {

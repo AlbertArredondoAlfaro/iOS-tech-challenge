@@ -33,7 +33,7 @@ extension ArtistViewModel {
     }
     
     private static func getViewModelWith(_ artistResponse: ArtistResponse) -> ArtistViewModel {
-        let artworkUrl = URL(string: artistResponse.artworkUrl100)
+        let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
         var releaseYear = ""
         if let releaseDate = Date.getISODateWithString(artistResponse.releaseDate) {
             releaseYear = releaseDate.getStringyyyyFormat()

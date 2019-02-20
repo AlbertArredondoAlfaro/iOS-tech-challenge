@@ -68,6 +68,8 @@
 		C8F56816221DA91A002182EA /* TrackDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56815221DA91A002182EA /* TrackDetailPresenter.swift */; };
 		C8F56818221DA933002182EA /* TrackDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56817221DA933002182EA /* TrackDetailInteractor.swift */; };
 		C8F5681A221DA947002182EA /* TrackDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56819221DA947002182EA /* TrackDetailRouter.swift */; };
+		C8F5681E221DD043002182EA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5681D221DD043002182EA /* ImageManager.swift */; };
+		C8F56821221DD22E002182EA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56820221DD22E002182EA /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +162,8 @@
 		C8F56815221DA91A002182EA /* TrackDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailPresenter.swift; sourceTree = "<group>"; };
 		C8F56817221DA933002182EA /* TrackDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailInteractor.swift; sourceTree = "<group>"; };
 		C8F56819221DA947002182EA /* TrackDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailRouter.swift; sourceTree = "<group>"; };
+		C8F5681D221DD043002182EA /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		C8F56820221DD22E002182EA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -421,6 +425,7 @@
 		C8F567B8221CA361002182EA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C8F5681C221DD034002182EA /* Image Manager */,
 				C8F567C0221CA8EF002182EA /* Search Suggestions */,
 				C8F567B9221CA37F002182EA /* Reachability Manager */,
 			);
@@ -473,6 +478,7 @@
 		C8F567D6221CB550002182EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8F5681F221DD224002182EA /* String */,
 				C8F56803221D8074002182EA /* Date */,
 				C8F567F5221D6095002182EA /* UIFont */,
 				C8F567E1221D5C8B002182EA /* UIView */,
@@ -611,6 +617,22 @@
 				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C8F5681C221DD034002182EA /* Image Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C8F5681D221DD043002182EA /* ImageManager.swift */,
+			);
+			path = "Image Manager";
+			sourceTree = "<group>";
+		};
+		C8F5681F221DD224002182EA /* String */ = {
+			isa = PBXGroup;
+			children = (
+				C8F56820221DD22E002182EA /* String.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -925,6 +947,7 @@
 				C8F56809221D841C002182EA /* SuggestionTableViewCell.swift in Sources */,
 				8B0EFD0821960BF80024DAA2 /* ArtistCollectionViewCell.swift in Sources */,
 				C8F56816221DA91A002182EA /* TrackDetailPresenter.swift in Sources */,
+				C8F5681E221DD043002182EA /* ImageManager.swift in Sources */,
 				C8F567E3221D5C99002182EA /* UIVIew.swift in Sources */,
 				C8F5680E221D8458002182EA /* SuggestionsView.swift in Sources */,
 				8B0CEE4321B54C2700C39C58 /* Entities.swift in Sources */,
@@ -939,6 +962,7 @@
 				C8F5680C221D843C002182EA /* SuggestionViewModel.swift in Sources */,
 				C8F5681A221DA947002182EA /* TrackDetailRouter.swift in Sources */,
 				C8F56814221DA90A002182EA /* TrackDetailViewController.swift in Sources */,
+				C8F56821221DD22E002182EA /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,8 +1132,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D9DND379G3;
 				INFOPLIST_FILE = "ABA Music/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1117,6 +1142,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abaenglish.ABA-Music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ABA Music/ABA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -1130,8 +1156,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D9DND379G3;
 				INFOPLIST_FILE = "ABA Music/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1139,6 +1166,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abaenglish.ABA-Music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ABA Music/ABA-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

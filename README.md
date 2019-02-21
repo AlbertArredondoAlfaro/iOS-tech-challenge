@@ -152,6 +152,10 @@ Reference: [Realm](https://realm.io/docs/swift/latest)
 
 ## What's left in the demo?
 
+* Realm migration process: It would be nice to add a process to migrate the realm database to a new model (just in case you need to add a new field into the database).
+* Localizable strings files: I didn't add localizable strings files.
+* Update the managers: I implemented the managers using singletons. The best option should be to remove the singletons in order to use dependency injections (to improve the testing).
+
 ## Programming languages && Development tools
 
 * Swift 4.2

@@ -25,7 +25,7 @@
 		C8F567AB221C915D002182EA /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AA221C915D002182EA /* Artist.swift */; };
 		C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AC221C93C0002182EA /* ArtistsRequest.swift */; };
 		C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AF221C948A002182EA /* NetworkTests.swift */; };
-		C8F567B5221C9B82002182EA /* Artists.json in Resources */ = {isa = PBXBuildFile; fileRef = C8F567B4221C9B82002182EA /* Artists.json */; };
+		C8F567B5221C9B82002182EA /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = C8F567B4221C9B82002182EA /* Tracks.json */; };
 		C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BA221CA398002182EA /* ReachabilityManager.swift */; };
 		C8F567BE221CA398002182EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BB221CA398002182EA /* Reachability.m */; };
 		C8F567C3221CA909002182EA /* SearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567C2221CA909002182EA /* SearchSuggestion.swift */; };
@@ -116,7 +116,7 @@
 		C8F567AA221C915D002182EA /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		C8F567AC221C93C0002182EA /* ArtistsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsRequest.swift; sourceTree = "<group>"; };
 		C8F567AF221C948A002182EA /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
-		C8F567B4221C9B82002182EA /* Artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Artists.json; sourceTree = "<group>"; };
+		C8F567B4221C9B82002182EA /* Tracks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
 		C8F567BA221CA398002182EA /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		C8F567BB221CA398002182EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C8F567BC221CA398002182EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -359,17 +359,17 @@
 		C8F567B2221C9B2F002182EA /* Simulated Response */ = {
 			isa = PBXGroup;
 			children = (
-				C8F567B3221C9B43002182EA /* Artists */,
+				C8F567B3221C9B43002182EA /* Tracks */,
 			);
 			path = "Simulated Response";
 			sourceTree = "<group>";
 		};
-		C8F567B3221C9B43002182EA /* Artists */ = {
+		C8F567B3221C9B43002182EA /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
-				C8F567B4221C9B82002182EA /* Artists.json */,
+				C8F567B4221C9B82002182EA /* Tracks.json */,
 			);
-			path = Artists;
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 		C8F567B6221C9EC8002182EA /* Search List */ = {
@@ -761,7 +761,7 @@
 			files = (
 				8BC33F5421944CDF00E3759C /* LaunchScreen.storyboard in Resources */,
 				C8F567F2221D6002002182EA /* InterUI-Medium.ttf in Resources */,
-				C8F567B5221C9B82002182EA /* Artists.json in Resources */,
+				C8F567B5221C9B82002182EA /* Tracks.json in Resources */,
 				C8F567ED221D6002002182EA /* InterUI-Bold.ttf in Resources */,
 				C8F567F4221D6002002182EA /* InterUI-Italic.ttf in Resources */,
 				8BC33F5121944CDF00E3759C /* Assets.xcassets in Resources */,

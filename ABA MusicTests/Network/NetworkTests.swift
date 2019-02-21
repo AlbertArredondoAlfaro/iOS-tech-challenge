@@ -9,7 +9,7 @@
 import XCTest
 @testable import ABA_Music
 
-typealias artistsCompletionBlock = (Result<ArtistsResponse?>) -> Void
+typealias tracksCompletionBlock = (Result<ArtistsResponse?>) -> Void
 
 class NetworkTests: XCTestCase {
 
@@ -23,19 +23,19 @@ class NetworkTests: XCTestCase {
         super.tearDown()
     }
 
-    func testArtistsResultsWith(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping artistsCompletionBlock) {
-        var artistsRequest = ArtistsRequest(search: search)
+    func testTracksResultsWith(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping tracksCompletionBlock) {
+        var tracksRequest = ArtistsRequest(search: search)
         
-        artistsRequest.completion = completion
-        artistsRequest.simulatedResponseJSONFile = simulatedJSONFile
-        artistsRequest.verbose = true
-        requestManager.send(request: artistsRequest)
+        tracksRequest.completion = completion
+        tracksRequest.simulatedResponseJSONFile = simulatedJSONFile
+        tracksRequest.verbose = true
+        requestManager.send(request: tracksRequest)
     }
     
-    func testArtistsResults() {
-        let artistsResultsExpectation: XCTestExpectation = self.expectation(description: "artistsResultsExpectation")
+    func testTracksResults() {
+        let tracksResultsExpectation: XCTestExpectation = self.expectation(description: "tracksResultsExpectation")
         
-        testArtistsResultsWith(search: "beatles") { (response) in
+        testTracksResultsWith(search: "beatles") { (response) in
             switch response {
             case .success(let response):
                 guard let response = response else {
@@ -47,16 +47,16 @@ class NetworkTests: XCTestCase {
                 XCTFail(error.localizedDescription)
             }
             
-            artistsResultsExpectation.fulfill()
+            tracksResultsExpectation.fulfill()
         }
         
         self.waitForExpectations(timeout: 25.0, handler: nil)
     }
     
-    func testSimulatedArtistsResults() {
-        let artistsResultsExpectation: XCTestExpectation = self.expectation(description: "artistsResultsExpectation")
+    func testSimulatedTracksResults() {
+        let tracksResultsExpectation: XCTestExpectation = self.expectation(description: "tracksResultsExpectation")
         
-        testArtistsResultsWith(search: "beatles", simulatedJSONFile: "Artists") { (response) in
+        testTracksResultsWith(search: "beatles", simulatedJSONFile: "Tracks") { (response) in
             switch response {
             case .success(let response):
                 guard let response = response else {
@@ -68,7 +68,7 @@ class NetworkTests: XCTestCase {
                 XCTFail(error.localizedDescription)
             }
             
-            artistsResultsExpectation.fulfill()
+            tracksResultsExpectation.fulfill()
         }
         
         self.waitForExpectations(timeout: 25.0, handler: nil)

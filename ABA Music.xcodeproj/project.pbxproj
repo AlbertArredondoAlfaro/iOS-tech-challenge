@@ -281,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				C8F56836221F1328002182EA /* Search List */,
-				C8F56837221F133A002182EA /* Track Detail */,
 				8BC33F6921944CDF00E3759C /* ABA_MusicUITests.swift */,
 				8BC33F6B21944CDF00E3759C /* Info.plist */,
 			);
@@ -692,13 +691,6 @@
 				C8F56838221F135E002182EA /* SearchListTests.swift */,
 			);
 			path = "Search List";
-			sourceTree = "<group>";
-		};
-		C8F56837221F133A002182EA /* Track Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Track Detail";
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {

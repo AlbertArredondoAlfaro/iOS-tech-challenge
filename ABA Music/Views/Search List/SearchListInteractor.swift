@@ -48,6 +48,15 @@ extension SearchListInteractor {
         SearchSuggestionsManager.shared.saveSuggestion(search)
     }
     
+    private func getRandomSearch() -> String {
+        let searchArray = ["The Beatles", "Oasis", "Blur", "The Verve"]
+        guard let randomSearch = searchArray.randomElement() else {
+            return "The Beatles"
+        }
+        
+        return randomSearch
+    }
+    
 }
 
 extension SearchListInteractor: SearchListInteractorDelegate {
@@ -104,7 +113,11 @@ extension SearchListInteractor: SearchListInteractorDelegate {
     }
     
     func getInitialSearch() -> String {
-        return "The beatles"
+        guard let lastSuggestion = SearchSuggestionsManager.shared.getLastSuggestion() else {
+            return getRandomSearch()
+        }
+        
+        return lastSuggestion.suggestion
     }
     
 }

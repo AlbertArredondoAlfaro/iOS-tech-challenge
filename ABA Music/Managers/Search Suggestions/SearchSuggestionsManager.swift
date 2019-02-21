@@ -54,6 +54,17 @@ class SearchSuggestionsManager {
     }
     
     /**
+     * Get last suggestion
+     */
+    public func getLastSuggestion() -> SearchSuggestion? {
+        let suggestions = getSuggestions()
+        
+        if suggestions.isEmpty { return nil }
+        
+        return suggestions.first
+    }
+    
+    /**
      * Delete all suggestions
      */
     public func deleteAllSuggestions() {

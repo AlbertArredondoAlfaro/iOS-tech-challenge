@@ -36,3 +36,73 @@ Basically I have a protocol file for each scene in the app. This file defines th
 Whith this protocols file is really easy to know how each layer notify / request / information to the other ones so we don't have any other way to communicate all the layers.
 
 Another important point is because I'm using protocols it's really easy to define mocks views / presenters / interactors / routers for testing.
+
+```swift
+// View / Presenter
+protocol SearchListViewInjection : class {
+    func showProgress(_ show: Bool, status: String)
+    func showProgress(_ show: Bool)
+    func showMessageWith(title: String, message: String, actionTitle: String)
+    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool)
+    func loadSuggestions(_ suggestions: [SuggestionViewModel])
+}
+
+protocol SearchListPresenterDelegate : class {
+    func viewDidLoad()
+    func searchTrack(_ search: String?)
+    func trackSelectedAt(section: Int, index: Int)
+    func getSuggestions()
+    func suggestionSelectedAt(_ index: Int)
+}
+
+// Presenter / Interactor
+
+typealias TracksGetTracksCompletionBlock = (_ viewModel: [TrackViewModel]?, _ success: Bool, _ error: ResultError?) -> Void
+typealias TrackListGetSuggestionsCompletionBlock = ([SuggestionViewModel]) -> Void
+
+protocol SearchListInteractorDelegate : class {
+    func getTracksList(search: String?, completion: @escaping TracksGetTracksCompletionBlock)
+    func clear()
+    func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel?
+    func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)
+    func getSuggestionAt(index: Int) -> SuggestionViewModel?
+}
+
+// Presenter / Router
+protocol SearchListRouterDelegate : class {
+    func showTrackDetail(_ track: TrackViewModel)
+}
+```
+
+## First at all. Where is the data came from?
+
+I'm using the iTunes search api. You can check the API [here](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/).
+
+## Data models
+
+### Network data models
+
+```swift
+public struct TracksResponse: Decodable {
+    
+    let resultCount: UInt
+    let results: [TrackResponse]
+    
+}
+
+public struct TrackResponse: Decodable {
+    
+    let artistName: String
+    let trackName: String
+    let trackViewUrl: String
+    let previewUrl: String?
+    let artworkUrl100: String
+    let releaseDate: String
+    let primaryGenreName: String
+    
+}
+```
+
+I'm using a Swift Standard Library decodable functionality in order to manage a type that can decode itself from an external representation (I really ❤ this from Swift).
+
+Reference: [Apple documentation](https://developer.apple.com/documentation/swift/swift_standard_library/encoding_decoding_and_serialization)

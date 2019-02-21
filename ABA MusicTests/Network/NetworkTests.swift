@@ -9,7 +9,7 @@
 import XCTest
 @testable import ABA_Music
 
-typealias tracksCompletionBlock = (Result<ArtistsResponse?>) -> Void
+typealias tracksCompletionBlock = (Result<TracksResponse?>) -> Void
 
 class NetworkTests: XCTestCase {
 
@@ -24,7 +24,7 @@ class NetworkTests: XCTestCase {
     }
 
     func testTracksResultsWith(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping tracksCompletionBlock) {
-        var tracksRequest = ArtistsRequest(search: search)
+        var tracksRequest = TracksRequest(search: search)
         
         tracksRequest.completion = completion
         tracksRequest.simulatedResponseJSONFile = simulatedJSONFile

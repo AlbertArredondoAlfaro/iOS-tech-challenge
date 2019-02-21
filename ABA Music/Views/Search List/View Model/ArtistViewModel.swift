@@ -34,11 +34,11 @@ struct ArtistViewModel {
 
 extension ArtistViewModel {
 
-    public static func getViewModelsWith(_ artistResponse: [ArtistResponse]) -> [ArtistViewModel] {
+    public static func getViewModelsWith(_ artistResponse: [TrackResponse]) -> [ArtistViewModel] {
         return artistResponse.map { getViewModelWith($0) }
     }
     
-    private static func getViewModelWith(_ artistResponse: ArtistResponse) -> ArtistViewModel {
+    private static func getViewModelWith(_ artistResponse: TrackResponse) -> ArtistViewModel {
         let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
         var releaseYear = ""
         var date = ""

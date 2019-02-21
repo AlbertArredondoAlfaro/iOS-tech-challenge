@@ -1,5 +1,5 @@
 //
-//  Artist.swift
+//  Track.swift
 //  ABA Music
 //
 //  Created by Ricardo Casanova on 19/02/2019.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-public struct ArtistsResponse: Decodable {
+public struct TracksResponse: Decodable {
     
     let resultCount: UInt
-    let results: [ArtistResponse]
+    let results: [TrackResponse]
     
 }
 
-public struct ArtistResponse: Decodable {
+public struct TrackResponse: Decodable {
     
     let wrapperType: String
     let kind: String

@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias getArtistsCompletionBlock = (Result<ArtistsResponse?>) -> Void
+typealias getArtistsCompletionBlock = (Result<TracksResponse?>) -> Void
 
 class SearchListInteractor {
     
@@ -31,14 +31,14 @@ class SearchListInteractor {
 extension SearchListInteractor {
     
     private func getArtists(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping getArtistsCompletionBlock) {
-        var artistsRequest = ArtistsRequest(search: search)
+        var artistsRequest = TracksRequest(search: search)
         
         artistsRequest.completion = completion
         artistsRequest.simulatedResponseJSONFile = simulatedJSONFile
         requestManager.send(request: artistsRequest)
     }
     
-    private func updateArtistsWith(_ artists: [ArtistResponse]) {
+    private func updateArtistsWith(_ artists: [TrackResponse]) {
         let artistsViewModel = ArtistViewModel.getViewModelsWith(artists)
         self.artistsViewModel.append(contentsOf: artistsViewModel)
     }

@@ -22,8 +22,8 @@
 		C8F567A4221C9111002182EA /* RequestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56797221C9111002182EA /* RequestErrors.swift */; };
 		C8F567A5221C9111002182EA /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56798221C9111002182EA /* ResultError.swift */; };
 		C8F567A6221C9111002182EA /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56799221C9111002182EA /* EndPoint.swift */; };
-		C8F567AB221C915D002182EA /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AA221C915D002182EA /* Artist.swift */; };
-		C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AC221C93C0002182EA /* ArtistsRequest.swift */; };
+		C8F567AB221C915D002182EA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AA221C915D002182EA /* Track.swift */; };
+		C8F567AD221C93C0002182EA /* TracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AC221C93C0002182EA /* TracksRequest.swift */; };
 		C8F567B0221C948A002182EA /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567AF221C948A002182EA /* NetworkTests.swift */; };
 		C8F567B5221C9B82002182EA /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = C8F567B4221C9B82002182EA /* Tracks.json */; };
 		C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567BA221CA398002182EA /* ReachabilityManager.swift */; };
@@ -113,8 +113,8 @@
 		C8F56797221C9111002182EA /* RequestErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrors.swift; sourceTree = "<group>"; };
 		C8F56798221C9111002182EA /* ResultError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 		C8F56799221C9111002182EA /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		C8F567AA221C915D002182EA /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		C8F567AC221C93C0002182EA /* ArtistsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsRequest.swift; sourceTree = "<group>"; };
+		C8F567AA221C915D002182EA /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		C8F567AC221C93C0002182EA /* TracksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRequest.swift; sourceTree = "<group>"; };
 		C8F567AF221C948A002182EA /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		C8F567B4221C9B82002182EA /* Tracks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
 		C8F567BA221CA398002182EA /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
@@ -318,7 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				C8F5679B221C9111002182EA /* Data Models */,
-				C8F567AC221C93C0002182EA /* ArtistsRequest.swift */,
+				C8F567AC221C93C0002182EA /* TracksRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -326,17 +326,17 @@
 		C8F5679B221C9111002182EA /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				C8F567A9221C912E002182EA /* Artist */,
+				C8F567A9221C912E002182EA /* Track */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
 		};
-		C8F567A9221C912E002182EA /* Artist */ = {
+		C8F567A9221C912E002182EA /* Track */ = {
 			isa = PBXGroup;
 			children = (
-				C8F567AA221C915D002182EA /* Artist.swift */,
+				C8F567AA221C915D002182EA /* Track.swift */,
 			);
-			path = Artist;
+			path = Track;
 			sourceTree = "<group>";
 		};
 		C8F567AE221C9456002182EA /* Network */ = {
@@ -924,14 +924,14 @@
 				C8F56802221D7EF1002182EA /* CustomTitleView.swift in Sources */,
 				C8F56818221DA933002182EA /* TrackDetailInteractor.swift in Sources */,
 				C8F567FA221D629F002182EA /* TrackCollectionViewCell.swift in Sources */,
-				C8F567AD221C93C0002182EA /* ArtistsRequest.swift in Sources */,
+				C8F567AD221C93C0002182EA /* TracksRequest.swift in Sources */,
 				C8F56809221D841C002182EA /* SuggestionTableViewCell.swift in Sources */,
 				C8F56816221DA91A002182EA /* TrackDetailPresenter.swift in Sources */,
 				C8F5681E221DD043002182EA /* ImageManager.swift in Sources */,
 				C8F567E3221D5C99002182EA /* UIVIew.swift in Sources */,
 				C8F5680E221D8458002182EA /* SuggestionsView.swift in Sources */,
 				C8F56812221DA8A4002182EA /* TrackDetailProtocols.swift in Sources */,
-				C8F567AB221C915D002182EA /* Artist.swift in Sources */,
+				C8F567AB221C915D002182EA /* Track.swift in Sources */,
 				C8F56805221D8080002182EA /* Date.swift in Sources */,
 				C8F567F7221D60A3002182EA /* UIFont.swift in Sources */,
 				C8F567A6221C9111002182EA /* EndPoint.swift in Sources */,

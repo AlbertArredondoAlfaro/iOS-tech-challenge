@@ -1,5 +1,5 @@
 //
-//  ArtistsRequest.swift
+//  TracksRequest.swift
 //  ABA Music
 //
 //  Created by Ricardo Casanova on 19/02/2019.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct ArtistsRequest: RequestProtocol {
+struct TracksRequest: RequestProtocol {
     
-    typealias ResponseType = ArtistsResponse
-    var completion: ((Result<ArtistsResponse?>) -> Void)?
+    typealias ResponseType = TracksResponse
+    var completion: ((Result<TracksResponse?>) -> Void)?
     var method: HTTPMethod = .get
     var url: URL?
     var encodableBody: Encodable?

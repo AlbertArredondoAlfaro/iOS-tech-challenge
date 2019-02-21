@@ -36,6 +36,7 @@ protocol SearchListInteractorDelegate : class {
     func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel?
     func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)
     func getSuggestionAt(index: Int) -> SuggestionViewModel?
+    func getInitialSearch() -> String
 }
 
 // Presenter / Router

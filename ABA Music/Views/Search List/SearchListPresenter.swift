@@ -56,7 +56,8 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     
     func viewDidLoad() {
         interactor.clear()
-        getTracks("the beatles", showProgress: true)
+        let initialSearch = interactor.getInitialSearch()
+        getTracks(initialSearch, showProgress: true)
     }
     
     func searchTrack(_ search: String?) {

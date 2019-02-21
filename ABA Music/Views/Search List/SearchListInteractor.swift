@@ -103,4 +103,8 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         return suggestions[index]
     }
     
+    func getInitialSearch() -> String {
+        return "The beatles"
+    }
+    
 }

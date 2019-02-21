@@ -14,6 +14,7 @@ class SearchListViewController: BaseViewController {
     
     private let customTitleView: CustomTitleView = CustomTitleView()
     private let searchView: SearchView = SearchView()
+    private let noResultsLabel: UILabel = UILabel()
     private let searchListContainerView: UIView = UIView()
     private var searchListCollectionView: UICollectionView?
     private let suggestionsView = SuggestionsView()
@@ -61,6 +62,12 @@ extension SearchListViewController {
         
         suggestionsView.isHidden = true
         suggestionsView.delegate = self
+        
+        noResultsLabel.font = UIFont.mediumWithSize(size: 14.0)
+        noResultsLabel.textColor = .white()
+        noResultsLabel.text = "No results. Please try again"
+        noResultsLabel.textAlignment = .center
+        noResultsLabel.isHidden = true
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
@@ -133,6 +140,10 @@ extension SearchListViewController {
             static let edgeSpacingRight: CGFloat = 16.0
         }
         
+        struct NoResultsLabel {
+            static let height: CGFloat = 17.0
+        }
+        
     }
     
     /**
@@ -151,6 +162,14 @@ extension SearchListViewController {
         view.addSubview(searchView)
         view.addSubview(searchListContainerView)
         view.addSubview(suggestionsView)
+        searchListContainerView.addSubview(noResultsLabel)
+        
+        let noResultsLabelCenterX = NSLayoutConstraint(item: noResultsLabel, attribute: .centerX, relatedBy: .equal, toItem: searchListContainerView, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        searchListContainerView.addConstraint(noResultsLabelCenterX)
+        let noResultsLabelCenterY = NSLayoutConstraint(item: noResultsLabel, attribute: .centerY, relatedBy: .equal, toItem: searchListContainerView, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        searchListContainerView.addConstraint(noResultsLabelCenterY)
+        searchListContainerView.addConstraintsWithFormat("H:|[v0]|", views: noResultsLabel)
+        searchListContainerView.addConstraintsWithFormat("V:[v0(\(Layout.NoResultsLabel.height))]", views: noResultsLabel)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: searchView)
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
@@ -289,6 +308,9 @@ extension SearchListViewController: SearchListViewInjection {
         
         datasource?.items = viewModels
         searchListCollectionView?.reloadData()
+        
+        searchListCollectionView?.isHidden = viewModels.isEmpty
+        noResultsLabel.isHidden = !viewModels.isEmpty
     }
     
     func loadSuggestions(_ suggestions: [SuggestionViewModel]) {

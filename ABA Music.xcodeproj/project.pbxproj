@@ -593,9 +593,9 @@
 		C8F5681B221DAD36002182EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C8F5682B221F02B7002182EA /* Player View */,
 				C8F56825221DDB0C002182EA /* Track Detail Header View */,
 				C8F56828221DDFFD002182EA /* Track Detail Info View */,
-				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,6 +638,14 @@
 				C8F56829221DE017002182EA /* TrackDetailInfoView.swift */,
 			);
 			path = "Track Detail Info View";
+			sourceTree = "<group>";
+		};
+		C8F5682B221F02B7002182EA /* Player View */ = {
+			isa = PBXGroup;
+			children = (
+				8BA3CDD4219761CB005264D4 /* PlayerView.swift */,
+			);
+			path = "Player View";
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {

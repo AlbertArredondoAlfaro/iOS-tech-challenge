@@ -28,13 +28,13 @@ extension SearchListPresenter {
     private func getTracks(_ search: String? = nil, showProgress: Bool) {
         view?.showProgress(showProgress, status: "Loading artists")
         
-        interactor.getArtistsList(search: search) { [weak self] (artists, success, error) in
+        interactor.getTracksList(search: search) { [weak self] (artists, success, error) in
             guard let `self` = self else { return }
             
             self.view?.showProgress(false)
             
             if let artists = artists {
-                self.view?.loadArtists(artists, fromBeginning: showProgress)
+                self.view?.loadTracks(artists, fromBeginning: showProgress)
                 return
             }
             
@@ -64,7 +64,7 @@ extension SearchListPresenter: SearchListPresenterDelegate {
         getTracks(search, showProgress: true)
     }
     
-    func artistSelectedAt(section: Int, index: Int) {
+    func trackSelectedAt(section: Int, index: Int) {
         guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index) else {
             return
         }

@@ -13,16 +13,16 @@ typealias getArtistsCompletionBlock = (Result<TracksResponse?>) -> Void
 class SearchListInteractor {
     
     private let requestManager: RequestManager
-    private var artistsViewModel: [TrackViewModel]
+    private var tracksViewModel: [TrackViewModel]
     private var suggestions: [SuggestionViewModel]
     
     convenience init() {
-        self.init(requestManager: RequestManager(), artistsViewModel: [TrackViewModel](), suggestions: [SuggestionViewModel]())
+        self.init(requestManager: RequestManager(), tracksViewModel: [TrackViewModel](), suggestions: [SuggestionViewModel]())
     }
     
-    init(requestManager: RequestManager, artistsViewModel: [TrackViewModel], suggestions: [SuggestionViewModel]) {
+    init(requestManager: RequestManager, tracksViewModel: [TrackViewModel], suggestions: [SuggestionViewModel]) {
         self.requestManager = requestManager
-        self.artistsViewModel = artistsViewModel
+        self.tracksViewModel = tracksViewModel
         self.suggestions = suggestions
     }
     
@@ -30,17 +30,17 @@ class SearchListInteractor {
 
 extension SearchListInteractor {
     
-    private func getArtists(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping getArtistsCompletionBlock) {
-        var artistsRequest = TracksRequest(search: search)
+    private func getTracks(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping getArtistsCompletionBlock) {
+        var tracksRequest = TracksRequest(search: search)
         
-        artistsRequest.completion = completion
-        artistsRequest.simulatedResponseJSONFile = simulatedJSONFile
-        requestManager.send(request: artistsRequest)
+        tracksRequest.completion = completion
+        tracksRequest.simulatedResponseJSONFile = simulatedJSONFile
+        requestManager.send(request: tracksRequest)
     }
     
-    private func updateArtistsWith(_ artists: [TrackResponse]) {
-        let artistsViewModel = TrackViewModel.getViewModelsWith(artists)
-        self.artistsViewModel.append(contentsOf: artistsViewModel)
+    private func updateTracksWith(_ tracks: [TrackResponse]) {
+        let tracksViewModel = TrackViewModel.getViewModelsWith(tracks)
+        self.tracksViewModel.append(contentsOf: tracksViewModel)
     }
     
     private func saveSearch(_ search: String?) {
@@ -52,8 +52,8 @@ extension SearchListInteractor {
 
 extension SearchListInteractor: SearchListInteractorDelegate {
     
-    func getArtistsList(search: String?, completion: @escaping TracksGetTracksCompletionBlock) {
-        getArtists(search: search) { [weak self] (response) in
+    func getTracksList(search: String?, completion: @escaping TracksGetTracksCompletionBlock) {
+        getTracks(search: search) { [weak self] (response) in
             guard let `self` = self else { return }
             
             switch response {
@@ -63,11 +63,11 @@ extension SearchListInteractor: SearchListInteractorDelegate {
                     return
                 }
                 
-                self.updateArtistsWith(response.results)
+                self.updateTracksWith(response.results)
                 if !response.results.isEmpty {
                     self.saveSearch(search)
                 }
-                completion(self.artistsViewModel, true, nil)
+                completion(self.tracksViewModel, true, nil)
             case .failure(let error):
                 completion(nil, false, error)
             }
@@ -75,11 +75,11 @@ extension SearchListInteractor: SearchListInteractorDelegate {
     }
     
     func clear() {
-        artistsViewModel = []
+        tracksViewModel = []
     }
     
     func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel? {
-        let dictionary = Dictionary(grouping: artistsViewModel, by: { $0.artistName })
+        let dictionary = Dictionary(grouping: tracksViewModel, by: { $0.artistName })
         let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         
         guard let tracks = dictionary[keysArray[section]] else {

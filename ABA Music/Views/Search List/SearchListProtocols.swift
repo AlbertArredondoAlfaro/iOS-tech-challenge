@@ -13,14 +13,14 @@ protocol SearchListViewInjection : class {
     func showProgress(_ show: Bool, status: String)
     func showProgress(_ show: Bool)
     func showMessageWith(title: String, message: String, actionTitle: String)
-    func loadArtists(_ viewModels: [TrackViewModel], fromBeginning: Bool)
+    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool)
     func loadSuggestions(_ suggestions: [SuggestionViewModel])
 }
 
 protocol SearchListPresenterDelegate : class {
     func viewDidLoad()
     func searchTrack(_ search: String?)
-    func artistSelectedAt(section: Int, index: Int)
+    func trackSelectedAt(section: Int, index: Int)
     func getSuggestions()
     func suggestionSelectedAt(_ index: Int)
 }
@@ -31,7 +31,7 @@ typealias TracksGetTracksCompletionBlock = (_ viewModel: [TrackViewModel]?, _ su
 typealias TrackListGetSuggestionsCompletionBlock = ([SuggestionViewModel]) -> Void
 
 protocol SearchListInteractorDelegate : class {
-    func getArtistsList(search: String?, completion: @escaping TracksGetTracksCompletionBlock)
+    func getTracksList(search: String?, completion: @escaping TracksGetTracksCompletionBlock)
     func clear()
     func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel?
     func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)

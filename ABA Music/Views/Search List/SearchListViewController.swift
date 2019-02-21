@@ -240,7 +240,7 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.artistSelectedAt(section: indexPath.section, index: indexPath.row)
+        presenter?.trackSelectedAt(section: indexPath.section, index: indexPath.row)
     }
     
 }
@@ -267,7 +267,7 @@ extension SearchListViewController: SearchListViewInjection {
         showAlertWith(title: title, message: message, actionTitle: actionTitle)
     }
     
-    func loadArtists(_ viewModels: [TrackViewModel], fromBeginning: Bool) {
+    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool) {
         if fromBeginning {
             searchListCollectionView?.setContentOffset(CGPoint.zero, animated: false)
         }

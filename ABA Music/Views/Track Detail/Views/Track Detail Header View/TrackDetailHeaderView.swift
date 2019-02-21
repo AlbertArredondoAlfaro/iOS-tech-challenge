@@ -9,14 +9,14 @@
 import UIKit
 
 protocol TrackDetailHeaderViewDelegate {
-    func showInItunesPressed()
+    func showInMusicPressed()
 }
 
 class TrackDetailHeaderView: UIView {
     
     public var delegate: TrackDetailHeaderViewDelegate?
     
-    private let showInItunesButton: UIButton = UIButton(type: .custom)
+    private let showInMusicButton: UIButton = UIButton(type: .custom)
     
     /**
      * Get component's height
@@ -48,12 +48,12 @@ extension TrackDetailHeaderView {
     }
     
     private func configureSubviews() {
-        showInItunesButton.titleLabel?.font = UIFont.regularWithSize(size: 16.0)
-        showInItunesButton.layer.cornerRadius = 10.0
-        showInItunesButton.layer.borderWidth = 1.0
-        showInItunesButton.layer.borderColor = UIColor.white().cgColor
-        showInItunesButton.setTitle("View in iTunes", for: .normal)
-        showInItunesButton.addTarget(self, action: #selector(showInItunesButtonPressed), for: .touchUpInside)
+        showInMusicButton.titleLabel?.font = UIFont.regularWithSize(size: 16.0)
+        showInMusicButton.layer.cornerRadius = 10.0
+        showInMusicButton.layer.borderWidth = 1.0
+        showInMusicButton.layer.borderColor = UIColor.white().cgColor
+        showInMusicButton.setTitle("View in Music", for: .normal)
+        showInMusicButton.addTarget(self, action: #selector(showInMusicButtonPressed), for: .touchUpInside)
     }
     
 }
@@ -72,9 +72,9 @@ extension TrackDetailHeaderView {
      * Add subviews
      */
     private func addSubviews() {
-        addSubview(showInItunesButton)
-        addConstraintsWithFormat("H:[v0(150.0)]-16.0-|", views: showInItunesButton)
-        addConstraintsWithFormat("V:|-16.0-[v0(40.0)]-16.0-|", views: showInItunesButton)
+        addSubview(showInMusicButton)
+        addConstraintsWithFormat("H:[v0(150.0)]-16.0-|", views: showInMusicButton)
+        addConstraintsWithFormat("V:|-16.0-[v0(40.0)]-16.0-|", views: showInMusicButton)
     }
     
 }
@@ -82,8 +82,8 @@ extension TrackDetailHeaderView {
 // MARK: - User actions
 extension TrackDetailHeaderView {
     
-    @objc private func showInItunesButtonPressed() {
-        delegate?.showInItunesPressed()
+    @objc private func showInMusicButtonPressed() {
+        delegate?.showInMusicPressed()
     }
     
 }

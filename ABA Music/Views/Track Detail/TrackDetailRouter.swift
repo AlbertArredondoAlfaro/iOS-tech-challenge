@@ -27,7 +27,7 @@ class TrackDetailRouter {
 
 extension TrackDetailRouter: TrackDetailRouterDelegate {
     
-    func showTrackInItunesWithUrl(_ url: URL) {
+    func showTrackInMusicWithUrl(_ url: URL) {
         let safariVC = SFSafariViewController(url: url)
         navigationController?.present(safariVC, animated: true, completion: nil)
     }

@@ -29,12 +29,12 @@ extension TrackDetailPresenter: TrackDetailPresenterDelegate {
         view?.loadTrack(track)
     }
     
-    func showInItunesSelected() {
+    func showInMusicSelected() {
         guard let url = track.trackViewUrl else {
             return
         }
         
-        router.showTrackInItunesWithUrl(url)
+        router.showTrackInMusicWithUrl(url)
     }
     
 }

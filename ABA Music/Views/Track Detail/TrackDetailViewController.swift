@@ -86,8 +86,8 @@ extension TrackDetailViewController {
 
 extension TrackDetailViewController: TrackDetailHeaderViewDelegate {
     
-    func showInItunesPressed() {
-        presenter?.showInItunesSelected()
+    func showInMusicPressed() {
+        presenter?.showInMusicSelected()
     }
     
 }

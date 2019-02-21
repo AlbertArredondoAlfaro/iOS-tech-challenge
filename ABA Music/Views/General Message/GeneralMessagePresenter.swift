@@ -34,7 +34,7 @@ extension GeneralMessagePresenter: GeneralMessagePresenterDelegate {
     func viewDidAppear() {
         switch type {
         case .NoInternetConnection:
-            view?.load(title: "Without connection to the network.", message: "iRecipe needs to connect to the internet.\nCheck the connections and try again.")
+            view?.load(title: "Without connection to the network.", message: "ABA Music needs to connect to the internet.\nCheck the connections and try again.")
             break
         }
     }

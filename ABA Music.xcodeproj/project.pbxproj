@@ -72,6 +72,7 @@
 		C8F56830221F0B1D002182EA /* GeneralMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5682D221F0B1C002182EA /* GeneralMessageViewController.swift */; };
 		C8F56831221F0B1D002182EA /* GeneralMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5682E221F0B1D002182EA /* GeneralMessagePresenter.swift */; };
 		C8F56832221F0B1D002182EA /* GeneralMessageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5682F221F0B1D002182EA /* GeneralMessageProtocols.swift */; };
+		C8F56835221F0B5E002182EA /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56834221F0B5E002182EA /* UIEdgeInsets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		C8F5682D221F0B1C002182EA /* GeneralMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageViewController.swift; sourceTree = "<group>"; };
 		C8F5682E221F0B1D002182EA /* GeneralMessagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessagePresenter.swift; sourceTree = "<group>"; };
 		C8F5682F221F0B1D002182EA /* GeneralMessageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageProtocols.swift; sourceTree = "<group>"; };
+		C8F56834221F0B5E002182EA /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -464,6 +466,7 @@
 		C8F567D6221CB550002182EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C8F56833221F0B55002182EA /* UIEdgeInsets */,
 				C8F5681F221DD224002182EA /* String */,
 				C8F56803221D8074002182EA /* Date */,
 				C8F567F5221D6095002182EA /* UIFont */,
@@ -663,6 +666,14 @@
 				C8F5682E221F0B1D002182EA /* GeneralMessagePresenter.swift */,
 			);
 			path = "General Message";
+			sourceTree = "<group>";
+		};
+		C8F56833221F0B55002182EA /* UIEdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				C8F56834221F0B5E002182EA /* UIEdgeInsets.swift */,
+			);
+			path = UIEdgeInsets;
 			sourceTree = "<group>";
 		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
@@ -930,6 +941,7 @@
 				8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */,
 				C8F567A5221C9111002182EA /* ResultError.swift in Sources */,
 				C8F56831221F0B1D002182EA /* GeneralMessagePresenter.swift in Sources */,
+				C8F56835221F0B5E002182EA /* UIEdgeInsets.swift in Sources */,
 				C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */,
 				C8F567A3221C9111002182EA /* RequestProtocol.swift in Sources */,
 				C8F567A1221C9111002182EA /* NetworkHeaders.swift in Sources */,

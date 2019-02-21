@@ -23,6 +23,11 @@ class TrackDetailViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        playerView.pause()
+    }
+    
 }
 
 // MARK: - Setup views

@@ -3,8 +3,8 @@ import AVFoundation
 
 class PlayerView: UIView {
     
-    var movieURL: URL?
-    var player: AVPlayer = AVPlayer()
+    public var movieURL: URL?
+    private var player: AVPlayer = AVPlayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,18 +24,11 @@ class PlayerView: UIView {
         return AVPlayerLayer.self
     }
     
-    private func setupPlayer() {
-        if let layer = layer as? AVPlayerLayer {
-            layer.player = player
-            layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        }
-    }
-    
-    func prepare(with movieURL: URL) {
+    public func prepare(with movieURL: URL) {
         self.movieURL = movieURL
     }
     
-    func play() {
+    public func play() {
         guard let movieURL = movieURL else { return }
 
         if let _ = player.currentItem {
@@ -51,8 +44,19 @@ class PlayerView: UIView {
         }
     }
     
-    func pause() {
+    public func pause() {
         player.pause()
+    }
+    
+}
+
+extension PlayerView {
+    
+    private func setupPlayer() {
+        if let layer = layer as? AVPlayerLayer {
+            layer.player = player
+            layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        }
     }
     
 }

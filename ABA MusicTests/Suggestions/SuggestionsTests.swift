@@ -57,6 +57,17 @@ class SuggestionsTests: XCTestCase {
             suggestions[2].suggestion == "the beatles")
     }
     
+    func testGetLastSuggestion() {
+        SearchSuggestionsManager.shared.deleteAllSuggestions()
+        
+        SearchSuggestionsManager.shared.saveSuggestion("The beatles")
+        SearchSuggestionsManager.shared.saveSuggestion("Oasis")
+        SearchSuggestionsManager.shared.saveSuggestion("Rolling Stones")
+        
+        let lastSuggestion = SearchSuggestionsManager.shared.getLastSuggestion()
+        XCTAssert(lastSuggestion?.suggestion == "rolling stones")
+    }
+    
     func testOnlyMaintainFirstSuggestions() {
         SearchSuggestionsManager.shared.deleteAllSuggestions()
         

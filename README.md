@@ -135,6 +135,10 @@ Reference: [Realm](https://realm.io/docs/swift/latest)
 ![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/01.png?raw=true)
 ![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/02.png?raw=true)
 
+### Track detail
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/04.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/05.png?raw=true)
+
 ## What's left in the demo?
 
 ## Programming languages && Development tools

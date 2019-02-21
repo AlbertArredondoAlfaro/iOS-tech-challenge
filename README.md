@@ -142,6 +142,12 @@ Reference: [Realm](https://realm.io/docs/swift/latest)
 ### No internet connection screen && No results
 ![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/03.png?raw=true)
 
+### Landscape mode
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/06.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/07.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/08.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/09.png?raw=true)
+
 ## What's left in the demo?
 
 ## Programming languages && Development tools

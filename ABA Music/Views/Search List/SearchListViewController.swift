@@ -248,7 +248,7 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
 extension SearchListViewController: SearchViewDelegate {
     
     func searchButtonPressedWithSearch(_ search: String?) {
-        presenter?.searchArtist(search)
+        presenter?.searchTrack(search)
     }
     
 }

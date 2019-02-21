@@ -17,8 +17,9 @@ struct ArtistViewModel {
     let releaseYear: String
     let previewUrl: URL?
     let primaryGenreName: String
+    let trackViewUrl: URL?
     
-    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String) {
+    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?) {
         self.artistName = artistName
         self.trackName = trackName
         self.artworkUrl = artworkUrl
@@ -26,6 +27,7 @@ struct ArtistViewModel {
         self.releaseYear = releaseYear
         self.previewUrl = previewUrl
         self.primaryGenreName = primaryGenreName
+        self.trackViewUrl = trackViewUrl
     }
     
 }
@@ -50,7 +52,9 @@ extension ArtistViewModel {
             previewUrl = URL(string: url)
         }
         
-        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName)
+        let trackViewUrl = URL(string: artistResponse.trackViewUrl)
+        
+        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl)
     }
     
 }

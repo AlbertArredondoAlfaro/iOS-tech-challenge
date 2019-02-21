@@ -15,6 +15,7 @@ protocol TrackDetailViewInjection : class {
 
 protocol TrackDetailPresenterDelegate : class {
     func viewDidLoad()
+    func showInItunesSelected()
 }
 
 // Presenter / Interactor
@@ -24,4 +25,5 @@ protocol TrackDetailInteractorDelegate : class {
 
 // Presenter / Router
 protocol TrackDetailRouterDelegate : class {
+    func showTrackInItunesWithUrl(_ url: URL)
 }

@@ -44,6 +44,8 @@ extension TrackDetailViewController {
      */
     private func configureSubviews() {
         playerView.backgroundColor = .black()
+        
+        trackDetailHeaderView.delegate = self
     }
     
     private func configureNavigationBar() {
@@ -78,6 +80,14 @@ extension TrackDetailViewController {
         
         view.addConstraintsWithFormat("H:|[v0]|", views: trackDetailInfoView)
         view.addConstraintsWithFormat("V:[v0][v1(>=0.0)]", views: trackDetailHeaderView, trackDetailInfoView)
+    }
+    
+}
+
+extension TrackDetailViewController: TrackDetailHeaderViewDelegate {
+    
+    func showInItunesPressed() {
+        presenter?.showInItunesSelected()
     }
     
 }

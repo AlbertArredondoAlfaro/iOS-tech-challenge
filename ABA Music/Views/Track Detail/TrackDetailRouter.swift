@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SafariServices
 
 class TrackDetailRouter {
     
@@ -16,13 +17,19 @@ class TrackDetailRouter {
         self.navigationController = navigationController
     }
     
-    public static func setupModuleWithTrack(_ track: ArtistViewModel) -> TrackDetailViewController {
+    public static func setupModuleWithTrack(_ track: ArtistViewModel, navigationController: UINavigationController?) -> TrackDetailViewController {
         let trackDetailVC = TrackDetailViewController()
-        trackDetailVC.presenter = TrackDetailPresenter(view: trackDetailVC, track: track)
+        trackDetailVC.presenter = TrackDetailPresenter(view: trackDetailVC, track: track, navigationController: navigationController)
         return trackDetailVC
     }
     
 }
 
 extension TrackDetailRouter: TrackDetailRouterDelegate {
+    
+    func showTrackInItunesWithUrl(_ url: URL) {
+        let safariVC = SFSafariViewController(url: url)
+        navigationController?.present(safariVC, animated: true, completion: nil)
+    }
+    
 }

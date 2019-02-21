@@ -53,6 +53,7 @@ extension TrackDetailHeaderView {
         showInItunesButton.layer.borderWidth = 1.0
         showInItunesButton.layer.borderColor = UIColor.white().cgColor
         showInItunesButton.setTitle("View in iTunes", for: .normal)
+        showInItunesButton.addTarget(self, action: #selector(showInItunesButtonPressed), for: .touchUpInside)
     }
     
 }
@@ -82,6 +83,7 @@ extension TrackDetailHeaderView {
 extension TrackDetailHeaderView {
     
     @objc private func showInItunesButtonPressed() {
+        delegate?.showInItunesPressed()
     }
     
 }

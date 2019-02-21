@@ -28,7 +28,7 @@ class SearchListRouter {
 extension SearchListRouter: SearchListRouterDelegate {
     
     func showTrackDetail(_ track: ArtistViewModel) {
-        let trackDetailVC = TrackDetailRouter.setupModuleWithTrack(track)
+        let trackDetailVC = TrackDetailRouter.setupModuleWithTrack(track, navigationController:  navigationController)
         navigationController?.pushViewController(trackDetailVC, animated: true)
     }
     

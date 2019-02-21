@@ -30,6 +30,11 @@ class SearchListViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        determinateNumberOfItemsPerRow()
+        searchListCollectionView?.reloadData()
+    }
+    
 }
 
 // MARK: - Setup views
@@ -39,6 +44,8 @@ extension SearchListViewController {
      * SetupViews
      */
     private func setupViews() {
+        determinateNumberOfItemsPerRow()
+        
         view.backgroundColor = .black()
         edgesForExtendedLayout = []
         
@@ -98,6 +105,14 @@ extension SearchListViewController {
     private func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func determinateNumberOfItemsPerRow() {
+        if UIDevice.current.orientation.isLandscape {
+            numberOfCellsInARow = 3
+        } else {
+            numberOfCellsInARow = 2
+        }
     }
     
 }

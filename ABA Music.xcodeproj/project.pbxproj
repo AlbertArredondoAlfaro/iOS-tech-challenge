@@ -69,6 +69,9 @@
 		C8F56824221DD4BF002182EA /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56823221DD4BF002182EA /* ImageManagerTests.swift */; };
 		C8F56827221DDB27002182EA /* TrackDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56826221DDB27002182EA /* TrackDetailHeaderView.swift */; };
 		C8F5682A221DE017002182EA /* TrackDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56829221DE017002182EA /* TrackDetailInfoView.swift */; };
+		C8F56830221F0B1D002182EA /* GeneralMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5682D221F0B1C002182EA /* GeneralMessageViewController.swift */; };
+		C8F56831221F0B1D002182EA /* GeneralMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5682E221F0B1D002182EA /* GeneralMessagePresenter.swift */; };
+		C8F56832221F0B1D002182EA /* GeneralMessageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5682F221F0B1D002182EA /* GeneralMessageProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +165,9 @@
 		C8F56823221DD4BF002182EA /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
 		C8F56826221DDB27002182EA /* TrackDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailHeaderView.swift; sourceTree = "<group>"; };
 		C8F56829221DE017002182EA /* TrackDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailInfoView.swift; sourceTree = "<group>"; };
+		C8F5682D221F0B1C002182EA /* GeneralMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageViewController.swift; sourceTree = "<group>"; };
+		C8F5682E221F0B1D002182EA /* GeneralMessagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessagePresenter.swift; sourceTree = "<group>"; };
+		C8F5682F221F0B1D002182EA /* GeneralMessageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageProtocols.swift; sourceTree = "<group>"; };
 		E05B3E277D1E98033BCBA05D /* Pods_ABA_Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1325838F46456027B52F079 /* Pods_ABA_MusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABA_MusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +206,7 @@
 				C8F567DD221D5C35002182EA /* Common */,
 				C8F567B6221C9EC8002182EA /* Search List */,
 				C8F567B7221C9ED6002182EA /* Track Detail */,
+				C8F5682C221F0B04002182EA /* General Message */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -648,6 +655,16 @@
 			path = "Player View";
 			sourceTree = "<group>";
 		};
+		C8F5682C221F0B04002182EA /* General Message */ = {
+			isa = PBXGroup;
+			children = (
+				C8F5682F221F0B1D002182EA /* GeneralMessageProtocols.swift */,
+				C8F5682D221F0B1C002182EA /* GeneralMessageViewController.swift */,
+				C8F5682E221F0B1D002182EA /* GeneralMessagePresenter.swift */,
+			);
+			path = "General Message";
+			sourceTree = "<group>";
+		};
 		CD115EEF2EF5580EEB68B4F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -905,12 +922,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F56832221F0B1D002182EA /* GeneralMessageProtocols.swift in Sources */,
 				C8F567D9221CB578002182EA /* UIColor.swift in Sources */,
 				C8F56827221DDB27002182EA /* TrackDetailHeaderView.swift in Sources */,
 				C8F567FF221D6623002182EA /* TrackHeaderView.swift in Sources */,
 				C8F567A0221C9111002182EA /* HTTPCode.swift in Sources */,
 				8BC33F4A21944CDE00E3759C /* AppDelegate.swift in Sources */,
 				C8F567A5221C9111002182EA /* ResultError.swift in Sources */,
+				C8F56831221F0B1D002182EA /* GeneralMessagePresenter.swift in Sources */,
 				C8F567BD221CA398002182EA /* ReachabilityManager.swift in Sources */,
 				C8F567A3221C9111002182EA /* RequestProtocol.swift in Sources */,
 				C8F567A1221C9111002182EA /* NetworkHeaders.swift in Sources */,
@@ -922,6 +941,7 @@
 				C8F567DC221CBA52002182EA /* TrackViewModel.swift in Sources */,
 				C8F567D5221CB371002182EA /* SearchListRouter.swift in Sources */,
 				C8F5679F221C9111002182EA /* RequestManager.swift in Sources */,
+				C8F56830221F0B1D002182EA /* GeneralMessageViewController.swift in Sources */,
 				8BA3CDD5219761CC005264D4 /* PlayerView.swift in Sources */,
 				C8F567C5221CA9A1002182EA /* SearchSuggestionsManager.swift in Sources */,
 				C8F567D1221CB351002182EA /* SearchListPresenter.swift in Sources */,

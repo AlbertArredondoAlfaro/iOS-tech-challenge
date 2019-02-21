@@ -14,10 +14,22 @@ def abaMusicPods
     pod 'Haneke', '~> 1.0'
 end
 
+def abaMusicUITestsPods
+    #SVProgressHUD
+    pod 'SVProgressHUD', '~> 2.2.5'
+    
+    #Haneke
+    pod 'Haneke', '~> 1.0'
+end
+
 target 'ABA Music' do
     abaMusicPods
 end
 
 target 'ABA MusicTests' do
     abaMusicPods
+end
+
+target 'ABA MusicUITests' do
+    abaMusicUITestsPods
 end

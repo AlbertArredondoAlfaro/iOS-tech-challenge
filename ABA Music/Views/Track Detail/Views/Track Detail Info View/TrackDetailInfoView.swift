@@ -24,7 +24,7 @@ class TrackDetailInfoView: UIView {
         setupViews()
     }
     
-    public func bindWithViewModel(_ viewModel: ArtistViewModel) {
+    public func bindWithViewModel(_ viewModel: TrackViewModel) {
         trackNameLabel.text = viewModel.trackName
         trackNameLabel.numberOfLines = 0
         

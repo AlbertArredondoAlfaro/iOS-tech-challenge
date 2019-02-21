@@ -94,7 +94,7 @@ extension TrackDetailViewController: TrackDetailHeaderViewDelegate {
 
 extension TrackDetailViewController: TrackDetailViewInjection {
     
-    func loadTrack(_ track: ArtistViewModel) {
+    func loadTrack(_ track: TrackViewModel) {
         if let previewUrl = track.previewUrl {
             playerView.prepare(with: previewUrl)
             playerView.play()

@@ -38,7 +38,7 @@
 		C8F567D3221CB360002182EA /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D2221CB360002182EA /* SearchListInteractor.swift */; };
 		C8F567D5221CB371002182EA /* SearchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D4221CB371002182EA /* SearchListRouter.swift */; };
 		C8F567D9221CB578002182EA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567D8221CB578002182EA /* UIColor.swift */; };
-		C8F567DC221CBA52002182EA /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567DB221CBA52002182EA /* ArtistViewModel.swift */; };
+		C8F567DC221CBA52002182EA /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567DB221CBA52002182EA /* TrackViewModel.swift */; };
 		C8F567E0221D5C60002182EA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567DF221D5C60002182EA /* SearchView.swift */; };
 		C8F567E3221D5C99002182EA /* UIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F567E2221D5C99002182EA /* UIVIew.swift */; };
 		C8F567ED221D6002002182EA /* InterUI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8F567E5221D6002002182EA /* InterUI-Bold.ttf */; };
@@ -131,7 +131,7 @@
 		C8F567D2221CB360002182EA /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
 		C8F567D4221CB371002182EA /* SearchListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListRouter.swift; sourceTree = "<group>"; };
 		C8F567D8221CB578002182EA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		C8F567DB221CBA52002182EA /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
+		C8F567DB221CBA52002182EA /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		C8F567DF221D5C60002182EA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		C8F567E2221D5C99002182EA /* UIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIew.swift; sourceTree = "<group>"; };
 		C8F567E5221D6002002182EA /* InterUI-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Bold.ttf"; sourceTree = "<group>"; };
@@ -477,7 +477,7 @@
 		C8F567DA221CB9F4002182EA /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				C8F567DB221CBA52002182EA /* ArtistViewModel.swift */,
+				C8F567DB221CBA52002182EA /* TrackViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -911,7 +911,7 @@
 				C8F567E0221D5C60002182EA /* SearchView.swift in Sources */,
 				C8F567CD221CB2B7002182EA /* SearchListProtocols.swift in Sources */,
 				C8F567CF221CB300002182EA /* SearchListViewController.swift in Sources */,
-				C8F567DC221CBA52002182EA /* ArtistViewModel.swift in Sources */,
+				C8F567DC221CBA52002182EA /* TrackViewModel.swift in Sources */,
 				C8F567D5221CB371002182EA /* SearchListRouter.swift in Sources */,
 				C8F5679F221C9111002182EA /* RequestManager.swift in Sources */,
 				8BA3CDD5219761CC005264D4 /* PlayerView.swift in Sources */,

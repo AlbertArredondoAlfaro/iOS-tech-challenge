@@ -1,5 +1,5 @@
 //
-//  ArtistViewModel.swift
+//  TrackViewModel.swift
 //  ABA Music
 //
 //  Created by Ricardo Casanova on 19/02/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArtistViewModel {
+struct TrackViewModel {
     
     let artistName: String
     let trackName: String
@@ -32,13 +32,13 @@ struct ArtistViewModel {
     
 }
 
-extension ArtistViewModel {
+extension TrackViewModel {
 
-    public static func getViewModelsWith(_ artistResponse: [TrackResponse]) -> [ArtistViewModel] {
+    public static func getViewModelsWith(_ artistResponse: [TrackResponse]) -> [TrackViewModel] {
         return artistResponse.map { getViewModelWith($0) }
     }
     
-    private static func getViewModelWith(_ artistResponse: TrackResponse) -> ArtistViewModel {
+    private static func getViewModelWith(_ artistResponse: TrackResponse) -> TrackViewModel {
         let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
         var releaseYear = ""
         var date = ""
@@ -54,7 +54,7 @@ extension ArtistViewModel {
         
         let trackViewUrl = URL(string: artistResponse.trackViewUrl)
         
-        return ArtistViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl)
+        return TrackViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl)
     }
     
 }

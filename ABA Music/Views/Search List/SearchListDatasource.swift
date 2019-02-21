@@ -10,7 +10,7 @@ import UIKit
 
 class SearchListDatasource: NSObject {
     
-    public var items: [ArtistViewModel] {
+    public var items: [TrackViewModel] {
         didSet {
             //__ This is a little trick.
             //__ I created a dicctionary with keys = $0.dt
@@ -24,7 +24,7 @@ class SearchListDatasource: NSObject {
         }
     }
     
-    private var dictionary: Dictionary<String, [ArtistViewModel]>
+    private var dictionary: Dictionary<String, [TrackViewModel]>
     private var keysArray: [String]
     
     public override init() {

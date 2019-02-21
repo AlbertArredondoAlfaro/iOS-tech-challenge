@@ -11,11 +11,11 @@ import Foundation
 class TrackDetailPresenter {
     
     private weak var view: TrackDetailViewInjection?
-    private let track: ArtistViewModel
+    private let track: TrackViewModel
     private let router: TrackDetailRouterDelegate
    
     // MARK - Lifecycle
-    init(view: TrackDetailViewInjection, track: ArtistViewModel, navigationController: UINavigationController? = nil) {
+    init(view: TrackDetailViewInjection, track: TrackViewModel, navigationController: UINavigationController? = nil) {
         self.view = view
         self.track = track
         self.router = TrackDetailRouter(navigationController: navigationController)

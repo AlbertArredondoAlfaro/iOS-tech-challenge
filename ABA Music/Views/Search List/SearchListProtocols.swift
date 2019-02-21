@@ -13,7 +13,7 @@ protocol SearchListViewInjection : class {
     func showProgress(_ show: Bool, status: String)
     func showProgress(_ show: Bool)
     func showMessageWith(title: String, message: String, actionTitle: String)
-    func loadArtists(_ viewModels: [ArtistViewModel], fromBeginning: Bool)
+    func loadArtists(_ viewModels: [TrackViewModel], fromBeginning: Bool)
     func loadSuggestions(_ suggestions: [SuggestionViewModel])
 }
 
@@ -27,18 +27,18 @@ protocol SearchListPresenterDelegate : class {
 
 // Presenter / Interactor
 
-typealias ArtistsGetArtistsCompletionBlock = (_ viewModel: [ArtistViewModel]?, _ success: Bool, _ error: ResultError?) -> Void
+typealias TracksGetTracksCompletionBlock = (_ viewModel: [TrackViewModel]?, _ success: Bool, _ error: ResultError?) -> Void
 typealias TrackListGetSuggestionsCompletionBlock = ([SuggestionViewModel]) -> Void
 
 protocol SearchListInteractorDelegate : class {
-    func getArtistsList(search: String?, completion: @escaping ArtistsGetArtistsCompletionBlock)
+    func getArtistsList(search: String?, completion: @escaping TracksGetTracksCompletionBlock)
     func clear()
-    func getTrackSelectedAt(section: Int, index: Int) -> ArtistViewModel?
+    func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel?
     func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)
     func getSuggestionAt(index: Int) -> SuggestionViewModel?
 }
 
 // Presenter / Router
 protocol SearchListRouterDelegate : class {
-    func showTrackDetail(_ track: ArtistViewModel)
+    func showTrackDetail(_ track: TrackViewModel)
 }

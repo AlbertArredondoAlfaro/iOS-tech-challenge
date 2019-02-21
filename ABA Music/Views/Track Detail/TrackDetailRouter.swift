@@ -17,7 +17,7 @@ class TrackDetailRouter {
         self.navigationController = navigationController
     }
     
-    public static func setupModuleWithTrack(_ track: ArtistViewModel, navigationController: UINavigationController?) -> TrackDetailViewController {
+    public static func setupModuleWithTrack(_ track: TrackViewModel, navigationController: UINavigationController?) -> TrackDetailViewController {
         let trackDetailVC = TrackDetailViewController()
         trackDetailVC.presenter = TrackDetailPresenter(view: trackDetailVC, track: track, navigationController: navigationController)
         return trackDetailVC

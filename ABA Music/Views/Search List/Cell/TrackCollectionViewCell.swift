@@ -42,7 +42,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         return (width * Layout.ratio.height) / Layout.ratio.width
     }
     
-    public func bindWithViewModel(_ viewModel: ArtistViewModel) {
+    public func bindWithViewModel(_ viewModel: TrackViewModel) {
         configureArtWorkWithUrl(viewModel.artworkUrl)
         trackNameLabel.text = viewModel.trackName
         releaseDateLabel.text = viewModel.releaseYear

@@ -267,7 +267,7 @@ extension SearchListViewController: SearchListViewInjection {
         showAlertWith(title: title, message: message, actionTitle: actionTitle)
     }
     
-    func loadArtists(_ viewModels: [ArtistViewModel], fromBeginning: Bool) {
+    func loadArtists(_ viewModels: [TrackViewModel], fromBeginning: Bool) {
         if fromBeginning {
             searchListCollectionView?.setContentOffset(CGPoint.zero, animated: false)
         }

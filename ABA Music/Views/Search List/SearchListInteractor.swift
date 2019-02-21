@@ -13,14 +13,14 @@ typealias getArtistsCompletionBlock = (Result<TracksResponse?>) -> Void
 class SearchListInteractor {
     
     private let requestManager: RequestManager
-    private var artistsViewModel: [ArtistViewModel]
+    private var artistsViewModel: [TrackViewModel]
     private var suggestions: [SuggestionViewModel]
     
     convenience init() {
-        self.init(requestManager: RequestManager(), artistsViewModel: [ArtistViewModel](), suggestions: [SuggestionViewModel]())
+        self.init(requestManager: RequestManager(), artistsViewModel: [TrackViewModel](), suggestions: [SuggestionViewModel]())
     }
     
-    init(requestManager: RequestManager, artistsViewModel: [ArtistViewModel], suggestions: [SuggestionViewModel]) {
+    init(requestManager: RequestManager, artistsViewModel: [TrackViewModel], suggestions: [SuggestionViewModel]) {
         self.requestManager = requestManager
         self.artistsViewModel = artistsViewModel
         self.suggestions = suggestions
@@ -39,7 +39,7 @@ extension SearchListInteractor {
     }
     
     private func updateArtistsWith(_ artists: [TrackResponse]) {
-        let artistsViewModel = ArtistViewModel.getViewModelsWith(artists)
+        let artistsViewModel = TrackViewModel.getViewModelsWith(artists)
         self.artistsViewModel.append(contentsOf: artistsViewModel)
     }
     
@@ -52,7 +52,7 @@ extension SearchListInteractor {
 
 extension SearchListInteractor: SearchListInteractorDelegate {
     
-    func getArtistsList(search: String?, completion: @escaping ArtistsGetArtistsCompletionBlock) {
+    func getArtistsList(search: String?, completion: @escaping TracksGetTracksCompletionBlock) {
         getArtists(search: search) { [weak self] (response) in
             guard let `self` = self else { return }
             
@@ -78,7 +78,7 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         artistsViewModel = []
     }
     
-    func getTrackSelectedAt(section: Int, index: Int) -> ArtistViewModel? {
+    func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel? {
         let dictionary = Dictionary(grouping: artistsViewModel, by: { $0.artistName })
         let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         

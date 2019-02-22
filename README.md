@@ -188,6 +188,7 @@ In this case if we're using the max size for images the result is not the best. 
 * Realm migration process: It would be nice to add a process to migrate the realm database to a new model (just in case you need to add a new field into the database).
 * Localizable strings files: I didn't add localizable strings files.
 * Update the managers: I implemented the managers using singletons. The best option should be to remove the singletons in order to use dependency injections (to improve the testing).
+* Add more UI tests: It would be great to add more UI tests to the project.
 
 ## Programming languages && Development tools
 

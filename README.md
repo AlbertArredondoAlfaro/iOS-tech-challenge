@@ -168,6 +168,21 @@ Used to process the images from iTunes API.
 ![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/08.png?raw=true)
 ![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/09.png?raw=true)
 
+## Little image trick
+
+The API response has 3 different sizes for artists / tracks:
+
+* 30x30 px
+* 60X60 px
+* 100x100 px
+
+In this case if we're using the max size for images the result is not the best. I did some test related with this point and I noticed that the API is able to respond other sizes too. In this case I decided to use a 200x200 px. I know this is not the best option but I think this can create a better UX for the user.
+
+### 100x100 px vs 200x200 px
+
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/11.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iOS-tech-challenge/blob/master/Images/12.png?raw=true)
+
 ## What's left in the demo?
 
 * Realm migration process: It would be nice to add a process to migrate the realm database to a new model (just in case you need to add a new field into the database).

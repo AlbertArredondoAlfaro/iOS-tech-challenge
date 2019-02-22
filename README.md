@@ -195,7 +195,7 @@ In this case if we're using the max size for images the result is not the best. 
 * Swift 4.2
 * Xcode 10.1
 * [Cocoapods](https://cocoapods.org) 1.5.3
-* Minimun iOS version: 12.1
+* Minimun iOS version: 11.0
 
 ## Third-Party Libraries
 

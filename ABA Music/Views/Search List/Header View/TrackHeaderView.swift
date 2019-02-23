@@ -46,10 +46,9 @@ class TrackHeaderView: UICollectionReusableView {
 // MARK: - Setup views
 extension TrackHeaderView {
     
-    public var height: CGFloat {
-        return 20.0
-    }
-    
+    /**
+     * Setup views
+     */
     private func setupViews() {
         backgroundColor = .black()
         
@@ -57,6 +56,9 @@ extension TrackHeaderView {
         addSubviews()
     }
     
+    /**
+     * Configure subviews
+     */
     private func configureSubviews() {
         topSeparatorImageView.image = UIImage(named: "SeparatorLine")
         titleLabel.font = UIFont.mediumWithSize(size: 16.0)
@@ -69,6 +71,9 @@ extension TrackHeaderView {
 // MARK: - Layout & constraints
 extension TrackHeaderView {
     
+    /**
+     * Private struct for internal layout
+     */
     private struct Layout {
         
         struct SeparatorImageView {
@@ -82,6 +87,9 @@ extension TrackHeaderView {
         
     }
     
+    /**
+     * Add subviews
+     */
     private func addSubviews() {
         addSubview(topSeparatorImageView)
         addSubview(titleLabel)

@@ -35,6 +35,7 @@ class SearchListDatasource: NSObject {
     }
 }
 
+// MARK: - UICollectionViewDataSource
 extension SearchListDatasource: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

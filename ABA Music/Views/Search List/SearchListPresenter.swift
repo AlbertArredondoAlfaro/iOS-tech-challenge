@@ -23,6 +23,7 @@ class SearchListPresenter {
     
 }
 
+// MARK: - Private section
 extension SearchListPresenter {
     
     private func getTracks(_ search: String? = nil, showProgress: Bool) {
@@ -52,6 +53,7 @@ extension SearchListPresenter {
     
 }
 
+// MARK: - SearchListPresenterDelegate
 extension SearchListPresenter: SearchListPresenterDelegate {
     
     func viewDidLoad() {

@@ -28,6 +28,7 @@ class SearchListInteractor {
     
 }
 
+// MARK: - Private section
 extension SearchListInteractor {
     
     private func getTracks(search: String? = nil, simulatedJSONFile: String? = nil, completion: @escaping getArtistsCompletionBlock) {
@@ -59,6 +60,7 @@ extension SearchListInteractor {
     
 }
 
+// MARK: - SearchListInteractorDelegate
 extension SearchListInteractor: SearchListInteractorDelegate {
     
     func getTracksList(search: String?, completion: @escaping TracksGetTracksCompletionBlock) {

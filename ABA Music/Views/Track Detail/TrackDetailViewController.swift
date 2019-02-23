@@ -19,7 +19,6 @@ class TrackDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        configureNavigationBar()
         presenter?.viewDidLoad()
     }
     
@@ -34,7 +33,7 @@ class TrackDetailViewController: BaseViewController {
 extension TrackDetailViewController {
     
     /**
-     * SetupViews
+     * Setup views
      */
     private func setupViews() {
         view.backgroundColor = .black()
@@ -45,7 +44,7 @@ extension TrackDetailViewController {
     }
     
     /**
-     * ConfigureSubviews
+     * Configure subviews
      */
     private func configureSubviews() {
         playerView.backgroundColor = .black()
@@ -53,20 +52,10 @@ extension TrackDetailViewController {
         trackDetailHeaderView.delegate = self
     }
     
-    private func configureNavigationBar() {
-    }
-    
 }
 
 // MARK: - Layout & constraints
 extension TrackDetailViewController {
-    
-    /**
-     * Internal struct for layout
-     */
-    private struct Layout {
-        
-    }
     
     /**
      * Add subviews
@@ -89,16 +78,27 @@ extension TrackDetailViewController {
     
 }
 
+// MARK: - TrackDetailHeaderViewDelegate
 extension TrackDetailViewController: TrackDetailHeaderViewDelegate {
     
+    /**
+     * Method to get the show in Music touch event
+     */
     func showInMusicPressed() {
         presenter?.showInMusicSelected()
     }
     
 }
 
+// MARK: - TrackDetailViewInjection
 extension TrackDetailViewController: TrackDetailViewInjection {
     
+    /**
+     * Load track
+     *
+     * - parameters:
+     *      -track: track view model
+     */
     func loadTrack(_ track: TrackViewModel) {
         if let previewUrl = track.previewUrl {
             playerView.prepare(with: previewUrl)

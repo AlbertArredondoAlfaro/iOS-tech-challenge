@@ -64,9 +64,20 @@ extension TrackDetailInfoView {
 extension TrackDetailInfoView {
     
     /**
-     * Internal struct for layout
+     * Private struct for internal layout
      */
     private struct Layout {
+        
+        static let leading: CGFloat = 16.0
+        static let trailing: CGFloat = 16.0
+        
+        struct ArtistNameLabel {
+            static let top: CGFloat = 5.0
+        }
+        
+        struct TrackInformationLabel {
+            static let top: CGFloat = 15.0
+        }
         
     }
     
@@ -78,14 +89,14 @@ extension TrackDetailInfoView {
         addSubview(artistNameLabel)
         addSubview(trackInformationLabel)
         
-        addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: trackNameLabel)
+        addConstraintsWithFormat("H:|-\(Layout.leading)-[v0]-\(Layout.trailing)-|", views: trackNameLabel)
         addConstraintsWithFormat("V:|[v0(>=0.0)]", views: trackNameLabel)
         
-        addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: artistNameLabel)
-        addConstraintsWithFormat("V:[v0]-5.0-[v1(>=0.0)]", views: trackNameLabel, artistNameLabel)
+        addConstraintsWithFormat("H:|-\(Layout.leading)-[v0]-\(Layout.trailing)-|", views: artistNameLabel)
+        addConstraintsWithFormat("V:[v0]-\(Layout.ArtistNameLabel.top)-[v1(>=0.0)]", views: trackNameLabel, artistNameLabel)
         
-        addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: trackInformationLabel)
-        addConstraintsWithFormat("V:[v0]-15.0-[v1(>=0.0)]", views: artistNameLabel, trackInformationLabel)
+        addConstraintsWithFormat("H:|-\(Layout.leading)-[v0]-\(Layout.trailing)-|", views: trackInformationLabel)
+        addConstraintsWithFormat("V:[v0]-\(Layout.TrackInformationLabel.top)-[v1(>=0.0)]", views: artistNameLabel, trackInformationLabel)
     }
     
 }

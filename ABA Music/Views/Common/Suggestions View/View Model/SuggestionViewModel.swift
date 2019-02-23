@@ -17,14 +17,14 @@ struct SuggestionViewModel {
     }
     
     /**
-     * Get the view models with a IMSearchSuggestion array
+     * Get the view models with a SearchSuggestion array
      */
     public static func getViewModelsWith(suggestions: [SearchSuggestion]) -> [SuggestionViewModel] {
         return suggestions.map { getViewModelWith(suggestion: $0) }
     }
     
     /**
-     * Get a single view model with a IMSearchSuggestion
+     * Get a single view model with a SearchSuggestion
      */
     public static func getViewModelWith(suggestion: SearchSuggestion) -> SuggestionViewModel {
         return SuggestionViewModel.init(suggestion: suggestion.suggestion)

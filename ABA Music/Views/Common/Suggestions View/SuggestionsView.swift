@@ -46,7 +46,7 @@ class SuggestionsView: UIView {
 extension SuggestionsView {
     
     /**
-     * SetupViews
+     * Setup views
      */
     private func setupViews() {
         backgroundColor = .white()
@@ -56,7 +56,7 @@ extension SuggestionsView {
     }
     
     /**
-     * ConfigureSubviews
+     * Configure subviews
      */
     private func configureSubviews() {
         suggestionsTableView = UITableView(frame: self.bounds, style: .plain)

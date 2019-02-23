@@ -302,6 +302,12 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
 // MARK: - SearchViewDelegate
 extension SearchListViewController: SearchViewDelegate {
     
+    /**
+     * Method to catch the search action
+     *
+     * - parameters:
+     *      -search: the search term
+     */
     func searchButtonPressedWithSearch(_ search: String?) {
         presenter?.searchTrack(search)
     }
@@ -311,18 +317,46 @@ extension SearchListViewController: SearchViewDelegate {
 // MARK: - SearchListViewInjection
 extension SearchListViewController: SearchListViewInjection {
     
+    /**
+     * Show progress
+     *
+     * - parameters:
+     *      -show: show / hide the progress
+     *      -status: the text to show in the progress
+     */
     func showProgress(_ show: Bool, status: String) {
         showLoader(show, status: status)
     }
     
+    /**
+     * Show progress
+     *
+     * - parameters:
+     *      -show: show / hide the progress
+     */
     func showProgress(_ show: Bool) {
         showLoader(show)
     }
     
+    /**
+     * Show message (alert)
+     *
+     * - parameters:
+     *      -title: title for the alert
+     *      -message: message to show in the alert
+     *      -actionTitle: text for the action
+     */
     func showMessageWith(title: String, message: String, actionTitle: String) {
         showAlertWith(title: title, message: message, actionTitle: actionTitle)
     }
     
+    /**
+     * Load tracks
+     *
+     * - parameters:
+     *      -viewModels: array for view model tracks
+     *      -fromBeginning: boolean to determinate if we're loading the tracks from scratch
+     */
     func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool) {
         if fromBeginning {
             searchListCollectionView?.setContentOffset(CGPoint.zero, animated: false)
@@ -335,6 +369,12 @@ extension SearchListViewController: SearchListViewInjection {
         noResultsLabel.isHidden = !viewModels.isEmpty
     }
     
+    /**
+     * Load suggestions
+     *
+     * - parameters:
+     *      -suggestions: array for view model suggestions
+     */
     func loadSuggestions(_ suggestions: [SuggestionViewModel]) {
         suggestionsView.suggestions = suggestions
     }

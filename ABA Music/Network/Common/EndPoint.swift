@@ -26,6 +26,11 @@ private struct Url {
         static let limit: String = "limit"
     }
     
+    struct Parameters {
+        static let limit: UInt = 200
+        static let video: String = "musicVideo"
+    }
+    
 }
 
 // MARK: - Endpoints
@@ -34,7 +39,7 @@ enum Endpoint: EndpointProtocol {
     var rawValue: String {
         switch self {
         case .getArtistWith(let search):
-            var endpoint = "?\(Url.Fields.media)=musicVideo&\(Url.Fields.entity)=musicVideo&\(Url.Fields.limit)=200"
+            var endpoint = "?\(Url.Fields.media)=\(Url.Parameters.video)&\(Url.Fields.entity)=\(Url.Parameters.video)&\(Url.Fields.limit)=\(Url.Parameters.limit)"
             
             if let search = search, let searchWithUrlFormat = search.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) {
                 endpoint = "\(endpoint)&\(Url.Fields.term)=\(searchWithUrlFormat)"

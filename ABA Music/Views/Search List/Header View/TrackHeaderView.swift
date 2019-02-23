@@ -38,7 +38,7 @@ class TrackHeaderView: UICollectionReusableView {
     }
     
     public static var height: CGFloat {
-        return 40.0
+        return Layout.height
     }
     
 }
@@ -75,6 +75,8 @@ extension TrackHeaderView {
      * Private struct for internal layout
      */
     private struct Layout {
+        
+        static let height: CGFloat = 40.0
         
         struct SeparatorImageView {
             static let height: CGFloat = 1.0

@@ -30,7 +30,7 @@ class GeneralMessageViewController: BaseViewController {
 extension GeneralMessageViewController {
     
     /**
-     * SetupViews
+     * Setup views
      */
     private func setupViews() {
         view.backgroundColor = .black()
@@ -40,7 +40,7 @@ extension GeneralMessageViewController {
     }
     
     /**
-     * ConfigureSubviews
+     * Configure subviews
      */
     private func configureSubviews() {
         titleLabel.font = UIFont.boldWithSize(size: 40.0)

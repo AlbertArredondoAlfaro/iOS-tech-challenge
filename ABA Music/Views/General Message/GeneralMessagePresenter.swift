@@ -19,6 +19,7 @@ class GeneralMessagePresenter {
     private weak var view: GeneralMessageViewInjection?
     private let type: GeneralMessageType
     
+    // MARK - Lifecycle
     init(view: GeneralMessageViewInjection, type: GeneralMessageType) {
         self.view = view
         self.type = type

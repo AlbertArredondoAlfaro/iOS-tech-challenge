@@ -22,7 +22,7 @@ class TrackDetailHeaderView: UIView {
      * Get component's height
      */
     public var height: CGFloat {
-        return 16.0 + 40.0 + 16.0
+        return Layout.ShowInMusicButton.top + Layout.ShowInMusicButton.height + Layout.ShowInMusicButton.bottom
     }
     
     override init(frame: CGRect) {

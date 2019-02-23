@@ -16,6 +16,7 @@ class SearchListInteractor {
     private var tracksViewModel: [TrackViewModel]
     private var suggestions: [SuggestionViewModel]
     
+    // MARK - Lifecycle
     convenience init() {
         self.init(requestManager: RequestManager(), tracksViewModel: [TrackViewModel](), suggestions: [SuggestionViewModel]())
     }

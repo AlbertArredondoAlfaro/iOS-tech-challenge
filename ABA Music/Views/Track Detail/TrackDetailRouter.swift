@@ -13,6 +13,7 @@ class TrackDetailRouter {
     
     private weak var navigationController: UINavigationController?
     
+    // MARK - Lifecycle
     init(navigationController: UINavigationController? = nil) {
         self.navigationController = navigationController
     }

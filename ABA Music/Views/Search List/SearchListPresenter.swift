@@ -26,6 +26,13 @@ class SearchListPresenter {
 // MARK: - Private section
 extension SearchListPresenter {
     
+    /**
+     * Get tracks
+     *
+     * - parameters:
+     *      -search: the search term
+     *      -showProgress: a boolean to show / hide the progress
+     */
     private func getTracks(_ search: String? = nil, showProgress: Bool) {
         view?.showProgress(showProgress, status: "Loading artists")
         
@@ -56,17 +63,29 @@ extension SearchListPresenter {
 // MARK: - SearchListPresenterDelegate
 extension SearchListPresenter: SearchListPresenterDelegate {
     
+    /**
+     * View did load
+     */
     func viewDidLoad() {
         interactor.clear()
         let initialSearch = interactor.getInitialSearch()
         getTracks(initialSearch, showProgress: true)
     }
     
+    /**
+     * Search track
+     *
+     * - parameters:
+     *      -search: the search term
+     */
     func searchTrack(_ search: String?) {
         interactor.clear()
         getTracks(search, showProgress: true)
     }
     
+    /**
+     * Track selected at section / index
+     */
     func trackSelectedAt(section: Int, index: Int) {
         guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index) else {
             return
@@ -75,6 +94,9 @@ extension SearchListPresenter: SearchListPresenterDelegate {
         router.showTrackDetail(trackSelected)
     }
     
+    /**
+     * Get all suggestions
+     */
     func getSuggestions() {
         interactor.getAllSuggestions { [weak self] (suggestions) in
             guard let `self` = self else { return }
@@ -82,6 +104,12 @@ extension SearchListPresenter: SearchListPresenterDelegate {
         }
     }
     
+    /**
+     * Suggestion selected at index
+     *
+     * - parameters:
+     *      -index: selected index
+     */
     func suggestionSelectedAt(_ index: Int) {
         guard let suggestion = interactor.getSuggestionAt(index: index) else {
             return

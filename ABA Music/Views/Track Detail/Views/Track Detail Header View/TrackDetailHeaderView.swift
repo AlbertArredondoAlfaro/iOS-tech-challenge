@@ -62,9 +62,17 @@ extension TrackDetailHeaderView {
 extension TrackDetailHeaderView {
     
     /**
-     * Internal struct for layout
+     * Private struct for internal layout
      */
     private struct Layout {
+        
+        struct ShowInMusicButton {
+            static let width: CGFloat = 150.0
+            static let height: CGFloat = 40.0
+            static let trailing: CGFloat = 16.0
+            static let top: CGFloat = 16.0
+            static let bottom: CGFloat = 40.0
+        }
         
     }
     
@@ -73,8 +81,8 @@ extension TrackDetailHeaderView {
      */
     private func addSubviews() {
         addSubview(showInMusicButton)
-        addConstraintsWithFormat("H:[v0(150.0)]-16.0-|", views: showInMusicButton)
-        addConstraintsWithFormat("V:|-16.0-[v0(40.0)]-16.0-|", views: showInMusicButton)
+        addConstraintsWithFormat("H:[v0(\(Layout.ShowInMusicButton.width))]-\(Layout.ShowInMusicButton.trailing)-|", views: showInMusicButton)
+        addConstraintsWithFormat("V:|-\(Layout.ShowInMusicButton.top)-[v0(\(Layout.ShowInMusicButton.height))]-\(Layout.ShowInMusicButton.bottom)-|", views: showInMusicButton)
     }
     
 }

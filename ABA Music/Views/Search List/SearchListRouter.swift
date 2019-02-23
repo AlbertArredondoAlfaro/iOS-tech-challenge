@@ -16,6 +16,9 @@ class SearchListRouter {
         self.navigationController = navigationController
     }
     
+    /**
+     * Setup the initial module
+     */
     public static func setupModule() -> UINavigationController {
         let searchListVC = SearchListViewController()
         let searchListNVC = UINavigationController(rootViewController: searchListVC)
@@ -28,6 +31,12 @@ class SearchListRouter {
 // MARK: - SearchListRouterDelegate
 extension SearchListRouter: SearchListRouterDelegate {
     
+    /**
+     * Show the track detail view
+     *
+     * - parameters:
+     *      -track: the track view model to show
+     */
     func showTrackDetail(_ track: TrackViewModel) {
         let trackDetailVC = TrackDetailRouter.setupModuleWithTrack(track, navigationController:  navigationController)
         navigationController?.pushViewController(trackDetailVC, animated: true)

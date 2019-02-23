@@ -35,7 +35,7 @@ class SuggestionTableViewCell: UITableViewCell {
      * Bind component
      *
      * - parameters:
-     *      -viewModel: IMSuggestionViewModel
+     *      -viewModel: SuggestionViewModel
      */
     public func bindWithViewModel(_ viewModel: SuggestionViewModel) {
         suggestionLabel.text = viewModel.suggestion
@@ -46,7 +46,7 @@ class SuggestionTableViewCell: UITableViewCell {
 extension SuggestionTableViewCell {
     
     /**
-     * SetupViews
+     * Setup views
      */
     private func setupViews() {
         backgroundColor = .clear
@@ -56,7 +56,7 @@ extension SuggestionTableViewCell {
     }
     
     /**
-     * ConfigureSubviews
+     * Configure subviews
      */
     private func configureSubviews() {
         suggestionLabel.font = UIFont.mediumWithSize(size: 17.0)

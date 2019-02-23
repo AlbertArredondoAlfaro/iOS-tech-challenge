@@ -42,6 +42,12 @@ class TrackCollectionViewCell: UICollectionViewCell {
         return (width * Layout.ratio.height) / Layout.ratio.width
     }
     
+    /**
+     * Bind component
+     *
+     * - parameters:
+     *      -viewModel: TrackViewModel
+     */
     public func bindWithViewModel(_ viewModel: TrackViewModel) {
         configureArtWorkWithUrl(viewModel.artworkUrl)
         trackNameLabel.text = viewModel.trackName

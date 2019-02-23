@@ -34,10 +34,22 @@ struct TrackViewModel {
 
 extension TrackViewModel {
 
+    /**
+     * Get the view models (array) from the tracks response array
+     *
+     * - parameters:
+     *      -artistResponse: the tracks response array
+     */
     public static func getViewModelsWith(_ artistResponse: [TrackResponse]) -> [TrackViewModel] {
         return artistResponse.map { getViewModelWith($0) }
     }
     
+    /**
+     * Get the view model (single view model) from the track response
+     *
+     * - parameters:
+     *      -artistResponse: the track response
+     */
     private static func getViewModelWith(_ artistResponse: TrackResponse) -> TrackViewModel {
         let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
         var releaseYear = ""

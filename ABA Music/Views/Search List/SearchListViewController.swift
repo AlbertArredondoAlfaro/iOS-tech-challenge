@@ -31,6 +31,10 @@ class SearchListViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
+    /**
+     * I'm using this override method to reload the collection view
+     * when the device orientation changes
+     */
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         determinateNumberOfItemsPerRow()
         searchListCollectionView?.reloadData()
@@ -42,7 +46,7 @@ class SearchListViewController: BaseViewController {
 extension SearchListViewController {
     
     /**
-     * SetupViews
+     * Setup views
      */
     private func setupViews() {
         determinateNumberOfItemsPerRow()
@@ -55,7 +59,7 @@ extension SearchListViewController {
     }
     
     /**
-     * ConfigureSubviews
+     * Configure subviews
      */
     private func configureSubviews() {
         searchView.delegate = self
@@ -80,6 +84,9 @@ extension SearchListViewController {
         setupDatasource()
     }
     
+    /**
+     * Configure navigation bar
+     */
     private func configureNavigationBar() {
         customTitleView.titleColor = .white()
         customTitleView.setTitle("ABA Music")
@@ -88,11 +95,17 @@ extension SearchListViewController {
         navigationItem.titleView = customTitleView
     }
     
+    /**
+     * Register all the cells for the collection view
+     */
     private func registerCells() {
         searchListCollectionView?.register(TrackCollectionViewCell.self, forCellWithReuseIdentifier: TrackCollectionViewCell.identifier)
         searchListCollectionView?.register(TrackHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: TrackHeaderView.identifier)
     }
     
+    /**
+     * Setup the data source
+     */
     private func setupDatasource() {
         if let searchListCollectionView = searchListCollectionView {
             datasource = SearchListDatasource()
@@ -100,7 +113,10 @@ extension SearchListViewController {
         }
     }
     
-    private func getPostCellSide() -> CGFloat {
+    /**
+     * Get track cell size
+     */
+    private func getTrackCellSide() -> CGFloat {
         let screenWidth: CGFloat = UIScreen.main.bounds.width
         let cellContainerWidth: CGFloat = screenWidth - Layout.CollectionViewCell.centerSpacing*(CGFloat(numberOfCellsInARow-1)) - Layout.CollectionViewCell.edgeSpacingLeft*CGFloat(numberOfCellsInARow)
         return cellContainerWidth / CGFloat(numberOfCellsInARow)
@@ -114,6 +130,10 @@ extension SearchListViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    /**
+     * Determinate de number of items per row
+     * (it will depend of the device orientation)
+     */
     private func determinateNumberOfItemsPerRow() {
         if UIDevice.current.orientation.isLandscape {
             numberOfCellsInARow = 3
@@ -248,11 +268,11 @@ extension SearchListViewController: SuggestionsViewDelegate {
     
 }
 
-// MARK:- UICollectionViewDelegate (with UICollectionViewDelegateFlowLayout)
+// MARK: - UICollectionViewDelegate (with UICollectionViewDelegateFlowLayout)
 extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let side = getPostCellSide()
+        let side = getTrackCellSide()
         
         return CGSize(width: side, height: TrackCollectionViewCell.getHeight(for: side))
     }
@@ -279,6 +299,7 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
     
 }
 
+// MARK: - SearchViewDelegate
 extension SearchListViewController: SearchViewDelegate {
     
     func searchButtonPressedWithSearch(_ search: String?) {
@@ -287,6 +308,7 @@ extension SearchListViewController: SearchViewDelegate {
     
 }
 
+// MARK: - SearchListViewInjection
 extension SearchListViewController: SearchListViewInjection {
     
     func showProgress(_ show: Bool, status: String) {

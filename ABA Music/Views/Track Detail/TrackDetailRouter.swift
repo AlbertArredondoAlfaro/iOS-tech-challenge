@@ -17,6 +17,9 @@ class TrackDetailRouter {
         self.navigationController = navigationController
     }
     
+    /**
+     * Setup the initial module
+     */
     public static func setupModuleWithTrack(_ track: TrackViewModel, navigationController: UINavigationController?) -> TrackDetailViewController {
         let trackDetailVC = TrackDetailViewController()
         trackDetailVC.presenter = TrackDetailPresenter(view: trackDetailVC, track: track, navigationController: navigationController)
@@ -27,6 +30,13 @@ class TrackDetailRouter {
 
 extension TrackDetailRouter: TrackDetailRouterDelegate {
     
+    /**
+     * Show track in Music
+     * NOTE: this feature is working ONLY in a real device
+     *
+     * - parameters:
+     *      -url: url to open the track in Music app
+     */
     func showTrackInMusicWithUrl(_ url: URL) {
         let safariVC = SFSafariViewController(url: url)
         navigationController?.present(safariVC, animated: true, completion: nil)

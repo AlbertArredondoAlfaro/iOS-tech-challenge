@@ -18,11 +18,6 @@ protocol TrackDetailPresenterDelegate : class {
     func showInMusicSelected()
 }
 
-// Presenter / Interactor
-
-protocol TrackDetailInteractorDelegate : class {
-}
-
 // Presenter / Router
 protocol TrackDetailRouterDelegate : class {
     func showTrackInMusicWithUrl(_ url: URL)

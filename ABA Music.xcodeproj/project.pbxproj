@@ -63,7 +63,6 @@
 		C8F56812221DA8A4002182EA /* TrackDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56811221DA8A4002182EA /* TrackDetailProtocols.swift */; };
 		C8F56814221DA90A002182EA /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56813221DA90A002182EA /* TrackDetailViewController.swift */; };
 		C8F56816221DA91A002182EA /* TrackDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56815221DA91A002182EA /* TrackDetailPresenter.swift */; };
-		C8F56818221DA933002182EA /* TrackDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56817221DA933002182EA /* TrackDetailInteractor.swift */; };
 		C8F5681A221DA947002182EA /* TrackDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56819221DA947002182EA /* TrackDetailRouter.swift */; };
 		C8F5681E221DD043002182EA /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5681D221DD043002182EA /* ImageManager.swift */; };
 		C8F56821221DD22E002182EA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F56820221DD22E002182EA /* String.swift */; };
@@ -163,7 +162,6 @@
 		C8F56811221DA8A4002182EA /* TrackDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailProtocols.swift; sourceTree = "<group>"; };
 		C8F56813221DA90A002182EA /* TrackDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
 		C8F56815221DA91A002182EA /* TrackDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailPresenter.swift; sourceTree = "<group>"; };
-		C8F56817221DA933002182EA /* TrackDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailInteractor.swift; sourceTree = "<group>"; };
 		C8F56819221DA947002182EA /* TrackDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailRouter.swift; sourceTree = "<group>"; };
 		C8F5681D221DD043002182EA /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C8F56820221DD22E002182EA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -413,7 +411,6 @@
 				C8F56811221DA8A4002182EA /* TrackDetailProtocols.swift */,
 				C8F56813221DA90A002182EA /* TrackDetailViewController.swift */,
 				C8F56815221DA91A002182EA /* TrackDetailPresenter.swift */,
-				C8F56817221DA933002182EA /* TrackDetailInteractor.swift */,
 				C8F56819221DA947002182EA /* TrackDetailRouter.swift */,
 			);
 			path = "Track Detail";
@@ -1027,7 +1024,6 @@
 				C8F567CB221CB1EB002182EA /* BaseViewController.swift in Sources */,
 				C8F56810221D846F002182EA /* SuggestionsDatasource.swift in Sources */,
 				C8F56802221D7EF1002182EA /* CustomTitleView.swift in Sources */,
-				C8F56818221DA933002182EA /* TrackDetailInteractor.swift in Sources */,
 				C8F567FA221D629F002182EA /* TrackCollectionViewCell.swift in Sources */,
 				C8F567AD221C93C0002182EA /* TracksRequest.swift in Sources */,
 				C8F56809221D841C002182EA /* SuggestionTableViewCell.swift in Sources */,

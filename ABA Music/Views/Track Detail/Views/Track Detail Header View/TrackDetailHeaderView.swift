@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol TrackDetailHeaderViewDelegate {
+protocol TrackDetailHeaderViewDelegate: class {
     func showInMusicPressed()
 }
 
 class TrackDetailHeaderView: UIView {
     
-    public var delegate: TrackDetailHeaderViewDelegate?
+    public weak var delegate: TrackDetailHeaderViewDelegate?
     
     private let showInMusicButton: UIButton = UIButton(type: .custom)
     

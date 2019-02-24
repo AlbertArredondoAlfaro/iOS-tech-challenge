@@ -38,35 +38,35 @@ extension TrackViewModel {
      * Get the view models (array) from the tracks response array
      *
      * - parameters:
-     *      -artistResponse: the tracks response array
+     *      -trackResponse: the tracks response array
      */
-    public static func getViewModelsWith(_ artistResponse: [TrackResponse]) -> [TrackViewModel] {
-        return artistResponse.map { getViewModelWith($0) }
+    public static func getViewModelsWith(_ trackResponse: [TrackResponse]) -> [TrackViewModel] {
+        return trackResponse.map { getViewModelWith($0) }
     }
     
     /**
      * Get the view model (single view model) from the track response
      *
      * - parameters:
-     *      -artistResponse: the track response
+     *      -trackResponse: the track response
      */
-    private static func getViewModelWith(_ artistResponse: TrackResponse) -> TrackViewModel {
-        let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
+    private static func getViewModelWith(_ trackResponse: TrackResponse) -> TrackViewModel {
+        let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: trackResponse.artworkUrl100), type: .large)
         var releaseYear = ""
         var date = ""
-        if let releaseDate = Date.getISODateWithString(artistResponse.releaseDate) {
+        if let releaseDate = Date.getISODateWithString(trackResponse.releaseDate) {
             releaseYear = releaseDate.getStringyyyyFormat()
             date = releaseDate.getStringMMMddyyyyFormat()
         }
         
         var previewUrl: URL?
-        if let url = artistResponse.previewUrl {
+        if let url = trackResponse.previewUrl {
             previewUrl = URL(string: url)
         }
         
-        let trackViewUrl = URL(string: artistResponse.trackViewUrl)
+        let trackViewUrl = URL(string: trackResponse.trackViewUrl)
         
-        return TrackViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl)
+        return TrackViewModel(artistName: trackResponse.artistName, trackName: trackResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: trackResponse.primaryGenreName, trackViewUrl: trackViewUrl)
     }
     
 }

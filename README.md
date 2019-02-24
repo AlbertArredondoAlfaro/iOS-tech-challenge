@@ -189,6 +189,7 @@ In this case if we're using the max size for images the result is not the best. 
 * Localizable strings files: I didn't add localizable strings files.
 * Update the managers: I implemented the managers using singletons. The best option should be to remove the singletons in order to use dependency injections (to improve the testing).
 * Add more UI tests: It would be great to add more UI tests to the project.
+* Create a manager to manage the video player (AVPlayer).
 
 ## Programming languages && Development tools
 
